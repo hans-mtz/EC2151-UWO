@@ -2,4 +2,4 @@
 
 EC2151B002, Winter 2024, UWO
 
-[Introduction]()
+[Introduction](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/intro.html)
