@@ -165,7 +165,26 @@ $$
 P = \frac{dC}{dQ}
 $$
 
-- To solve @eq-perf-comp, firms select quantities such that prices are equal to their marginal cost
+- To solve @eq-perf-comp, firms select quantities such that prices are equal to their **marginal** cost
+
+- What happens if prices increase? What happens if the cost function increases?
+
+## Recap
+
+- Economics is the science that studies the allocation of scarce resources to satisfy competing uses
+
+- What sets economics apart from other Social Sciences is its approach: Maximizing behavior, market equilibrium, and stable preferences (profit functions)
+
+- Microeconomics studies the behavior of individual decision makers
+
+
+## Recap
+
+- Economics use models, simplified descriptions of reality designed to yield predictions about economic phenomena
+
+- The three analytical tools we use are 1) Constrained optimization, 2) Equilibrium analyses, and 3) Comparative statics
+
+
 
 
 

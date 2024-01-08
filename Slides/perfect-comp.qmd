@@ -1,0 +1,290 @@
+---
+title: "Perfect Competition"
+subtitle: "CH 9"
+author: "Hans Martinez"
+institute: "Western University"
+date: ""
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: true
+    incremental: true
+    theme: [simple, theme.scss ]
+    width: 1260
+    height: 700
+    embed-resources: true
+    navigation-mode: linear
+    # revealjs-plugins:
+    #   - fullscreen
+    # include-in-header: packages.tex
+    # css: [style.css, xaringan-themer.css]
+    # logo: images/quarto.png
+    # footer: <https://quarto.org>
+# resources:
+#   - Paper/WP-LCFI.pdf
+# bibliography: biblio/lcfi.bib
+
+---
+## Perfect Competition (Review)
+
+- What is Perfect Competition?
+- Profit Maximization by a Price-Taking Firm
+- Short-Run vs. Long-Run Equilibrium
+- Economic Rent and Producer Surplus
+- Profit Maximization Implies Cost Minimization
+
+## Perfectly Competitive Markets
+
+- A perfectly competitive market consists of firms that produce identical products that sell at the same price
+
+- Each firm’s volume of output is so small in comparison to the overall market demand that no single firm has an impact on the market price
+
+## Perfectly Competitive Markets - Conditions
+
+1. The industry is fragmented
+    - It consists of many buyers and sellers
+
+1. Firms produce undifferentiated products
+    - Consumers perceive the products to be identical no matter who produces them
+
+1. Consumers have perfect information about prices
+    - The industry is characterized by equal access to resources
+
+1. All firms —incumbents and prospective entrants— have access to the same technology and inputs
+
+## Implications of Conditions
+
+- The first characteristic implies that sellers and buyers act as price takers
+
+- The second and third characteristics imply a law of one price
+
+- The fourth characteristic implies that the industry is characterized by free entry
+
+## The Profit Maximization Hypothesis
+
+$$
+\begin{align}
+\max_{Q} \pi(Q)&=R(Q)-C(Q) \\
+\text{s.t. } Q&\ge0
+\end{align}
+$$ {#eq-perf-comp}
+
+- Economic Profit = Sales Revenue - Economic (Opportunity) Cost
+
+- firm sells output Q; R(Q), revenue from selling the quantity; C(Q) = economic cost of producing the quantity Q
+
+## The Profit Maximization Condition Continued
+
+<!-- Since P is taken as given, firm chooses Q to maximize profit
+Marginal Revenue: The rate which TR change with output
+𝑀𝑅=∆𝑇𝑅/∆𝑄
+Since firm is a price taker, increase in TR from 1 unit change in Q is equal to P
+𝑀𝑅=∆𝑇𝑅/∆𝑄=∆(𝑃×𝑄)/∆𝑄=𝑃
+Profit Maximization by a Price-Taking Firm
+If P > MC then profit rises if output is increased
+If P < MC then profit falls if output is increased.
+Therefore, the profit maximization condition for a price-taking firm is P = MC
+At profit maximizing point:
+P = MC = MR
+MC rising
+
+Short-Run Equilibrium
+The short-run is the period of time in which the firm’s plant size is fixed and the number of firms in the industry is fixed
+STC(Q) = SFC + NSFC + TVC(q) for q > 0
+STC(Q) = SFC for q = 0
+SFC is the cost of the firm’s fixed input that are unavoidable at q = 0
+Output insensitive for q > 0 = Sunk 
+NSFC is the cost of the firm’s inputs that are avoidable if the firm produces zero (salaries of some employees, for example)
+Output insensitive for q > 0 = Non-sunk
+TFC = SFC + NSFC
+TVC(q) are the output sensitive costs (and are non-sunk)
+Short-Run Supply Curve (SRSC)
+The firm’s short-run supply curve tells us how the profit maximizing output changes as the market price changes
+Short Run Supply Curve: NSFC=0
+If the firm chooses to produce a positive output, P = SMC defines the short run supply curve of the firm
+But…
+
+Shut Down Price
+The firm will choose to produce a positive output only if:
+(q) > (0) …or…
+Pq – TVC(q) – TFC > -TFC
+Pq – TVC(q) > 0
+P > AVC(q)
+
+The price below which the firm would opt to produce zero is called the shut down price, Ps
+In this case, Ps is the minimum point on the AVC curve
+Short Run Supply Function
+Therefore, the firm’s short run supply function is defined by:
+P=SMC, where SMC slopes upward as long as P > Ps
+0 where P < Ps
+This means that a perfectly competitive firm may choose to operate in the short run even if economic profit is negative
+
+Cost Considerations
+At prices below SAC but above AVC, profits are negative if the firm produces
+But the firm loses less by producing than by shutting down because of sunk costs
+Example:
+STC(q)	= 100 + 20q + q2
+TFC	= 100 (this is sunk)
+TVC(q)	= 20q + q2
+AVC(q)	= 20 + q
+SMC(q)	= 20 + 2q
+
+Cost Considerations Continued
+The minimum level of AVC is the point where AVC = SMC or:
+20+q = 20+2q
+q = 0 
+AVC minimized at 20
+The firm’s short run supply curve is, then:
+P < Ps = 20: qs = 0
+P > Ps = 20: P = SMC
+P = 20+2q  qs = 10 + ½P
+
+SRSC When All Costs are Non-Sunk
+If the firm chooses to produce a positive output, P = SMC defines the short run supply curve of the firm
+But the firm will choose to produce a positive output only if:
+(q) > (0) …or…
+Pq – TVC(q) - TFC > 0
+P > AVC(q) + AFC(q) = SAC(q)
+Now, the shut down price, Ps is the minimum of the SAC curve
+
+SRSC When All Costs are Non-Sunk: Example
+STC(q) = F + 20q + q2
+F = 100, all of which is sunk:
+AVC(q) = 20 + q
+SMC(q) = 20 + 2q
+SAC(q) = 100/q + 20 + q
+SAC = SMC at q = 10
+
+At any P > 40, the firm earns positive economic profit
+At any P < 40, the firm earns negative economic profit
+Market Supply and Equilibrium
+The market supply at any price is the sum of the quantities each firm supplies at that price
+The short run market supply curve is the horizontal sum of the individual firm supply curves
+Short Run Perfectly Completive Equilibrium
+A short run perfectly competitive equilibrium occurs when the market quantity demanded equals the market quantity supplied
+∑_(𝑖=1)^𝑛▒〖𝑄_𝑠^𝑖 (𝑃)=𝑄_𝑑 (𝑃) 〗
+Qsi(P) is determined by the firm's individual profit maximization condition
+
+Short Run Market Equilibrium
+Short-run perfectly competitive equilibrium: The market price at which quantity demanded equals quantity supplied
+Typical firm produces Q* where MR=MC and if 100 firms make up the market then market supply must equal 100Q*
+Deriving a Short Run Market Equilibrium
+300 Identical firms
+Qd(P) = 60 – P
+STC(q) = 0.1 + 150q2
+SMC(q) = 300q
+NSFC = 0
+AVC(q) = 150q
+Minimum AVC = 0 so as long as price is positive, firm will produce
+
+Short run equilibrium
+Profit maximization condition: 
+P = 300q
+qs(P) = P/300 and Qs(P) = 300(P/300) = P
+Qs(P) = Qd(P)  P = 60 – P
+P*= 30
+q* = 30/300=.1
+Q* = 30
+
+Deriving a Short Run Market Equilibrium Continued
+Do firms make positive profits at the market equilibrium?
+SAC = STC/q = .1/q + 150q
+When each firm produces .1, SAC per firm is:.1/.1 + 150(.1) = 16
+Therefore, P* > SAC so profits are positive
+
+Comparative Statics Analysis
+An increase in the number of firms shifts the short-run supply curve rightward
+The quantity supplied at any price goes up
+The rightward shift drives the equilibrium price down and the equilibrium quantity up
+Comparative Statics
+In panel (a), supply is relatively elastic, and a shift in demand has a modest impact on price
+In panel (b), supply is relatively inelastic, and the identical shift in demand has a more dramatic impact on the equilibrium price
+When demand shifts, elasticity of supply matters
+Long Run Market Equilibrium
+The long run is the period of time in which all the firm’s inputs can be adjusted
+The number of firms in the industry can change as well
+The firm should use long run cost functions for evaluating the cost of outputs it might produce in this longer term period
+In otherwords, decisions to modify plant size, enter or exit, change production process and so on would all be based on long term analysis
+
+Firm’s Long Run Supply Curve
+The firm’s long run supply curve:
+P = MC for P > (min(AC) = Ps)
+0 (exit) for P < (min(AC) = Ps)
+At right, for prices greater that $0.20 the long-run supply curve is the long-run MC curve
+
+Long-Run Equilibrium in a Perfectly Competitive Market
+The long-run equilibrium price P* equals the minimum level of long-run average cost
+$15 per unit
+Each firm produces a quantity Q* equal to its minimum efficient scale
+50,000 units
+The equilibrium quantity demanded is 10 million units
+The equilibrium number of firms is this amount divided by the output per firm of 50,000
+n* = D(P*)/Q* = 10,000,000/50,000 = 200
+Calculating Long-Run Equilibrium
+TC(q) = 40q - q2 + .01q3
+AC(q) = 40 – q + .01q2
+MC(q) = 40 – 2q + .03q2
+Qd(P) = 25000-1000P
+The long run equilibrium satisfies the following:
+a. P* = 40 – 2q* - .03q*2
+b. P* = 40 – q* + .01q*2
+c. 25000-1000P* = q*n*
+
+Using (a) and (b), we have:
+40 – 2q* + .03q*2 = 40-q*+.01q*2
+q* = 50
+P* = 15
+Qd(P*) = 10000
+Using (c) we have:
+n* = 10000/50 = 200
+
+Calculating Long-Run Equilibrium Continued
+Summarizing long run equilibrium
+“If anyone can do it, you can’t make money at it”
+Or if the firm’s strategy is based on skills that can be easily imitated or resources that can be easily acquired, in the long run your economic profit will be competed away
+Long-Run Market Supply Curve
+We have calculated a point at which the market will be in long run equilibrium
+This is a point on the long run market supply curve
+This curve can be derived explicitly
+The long run market supply curve tells us the total quantity of output that will be supplied at various market prices, assuming that all long run adjustments (plant, entry) take place
+
+Long-Run Market Supply Curve Continued
+Since new entry can occur in the long run, we cannot obtain the long run market supply curve by summing the long run supplies of current market participants 
+Instead, we must construct the long run market supply curve
+We reason that, in the long run, output expansion or contraction in the industry occurs along a horizontal line corresponding to the minimum level of long run average cost
+If P > min(AC), entry would occur, driving price back to min(AC)
+If P < min(AC), firms would earn negative profits and would supply nothing
+
+Long-Run Market Supply Curve Continued
+Constant-Cost Industry
+An industry in which the increase or decrease of industry output does not affect the price of inputs
+We can have a constant-cost industry even though firms do not have constant returns to scale
+Increasing-Cost Industry
+Increasing cost Industry: An industry which increases in industry output increase the price of inputs.
+Especially if firms use industry specific inputs i.e. scarce inputs that are used only by firms in a particular industry and no other industry
+Decreasing-Cost Industry
+An industry in which increases in industry output decrease the prices of some or all inputs
+Each firm’s average and marginal cost curves may fall, not because the firms produce with economies of scale, but because input prices fall when the industry produces more
+Economic Rent
+Economic Rent: The economics rent that is attributed to extraordinarily productive inputs whose supply is scarce
+Difference between the maximum value is willing to pay for the services of the input and input’s reservation value
+Reservation value: The returns that the owner of an input could get by deploying the input in its best alternative use outside the industry
+Producer Surplus
+Producer surplus is the area above the market supply curve and below the market price
+It is a monetary measure of the benefit that producers derive from producing a good at a particular price.
+Note that that the producer earns the price for every unit sold, but only incurs the SMC for each unit
+This is why the difference between the P and SMC curve measures the total benefit derived from production
+Further, since the market supply curve is simply the sum of the individual supply curves
+Which equal the marginal cost curves the difference between price and the market supply curve measures the surplus of all producers in the market
+Note that that producer’s surplus does not deduct fixed costs, so it does not equal profit
+Producer Surplus Continued
+Producer Surplus Continued
+Producer surplus is area FBCE when price is $3.50
+Change in producer surplus is area P1P2GH when price moves from P1 to P2
+Producer Surplus in the Milk Market
+Given Market supply curve and P is the price in dollars per gallon
+Find producer surplus when price is $2.50 per gallon
+How much does producer surplus when price of milk increases from $2.50 to $4.00 -->
