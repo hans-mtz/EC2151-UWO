@@ -1,12 +1,14 @@
 # Usually, only these lines need changing
 # QPAPFILE = Tax-Prod
 QSLIFOLD = Slides
+QPDFFOLD = Notes
 # RDIR = ./Code/Colombia
 # QPAPDIR = ./Paper
 # QSLIDIR = ./Quarto-Slides
 
 # list all R files
 QSLIFILES := $(wildcard $(QSLIFOLD)/*.qmd)
+QPDFFILES := $(wildcard $(QPDFFOLD)/*.qmd)
 # RFILES := $(wildcard $(RDIR)/*.R)
 # EXCLUDE := $(wildcard $(RDIR)/_*.R)
 # QFILES := $(wildcard $(QPAPDIR)/*.qmd)
@@ -24,13 +26,13 @@ QSLIFILES := $(wildcard $(QSLIFOLD)/*.qmd)
 # OUT_FILES := $(RFILES:.R=.Rout)
 # RDEPOUT := $(RIND:.R=.Rout)
 Q_SLI_OUT_FILES := $(QSLIFILES:.qmd=.html)
-
+Q_PDF_OUT_FILES := $(QPDFFILES:.qmd=.pdf)
 # Targets
 ## Default target
 main: $(RDIR)/main.Rout #$(filter-out $(RDIR)/main.Rout, $(OUT_FILES))
 
 ## Make all
-all: main paper slides
+all: slides pdfs
 
 ## Run R files
 R: $(OUT_FILES)
@@ -50,7 +52,8 @@ html:
 slides: $(Q_SLI_OUT_FILES)
 #	quarto render $(QSLIDIR)/$(QSLIFILE).qmd
 #	open -a Safari $(QSLIDIR)/$(QSLIFILE).html
-
+# Make pdfs
+pdfs: $(Q_PDF_OUT_FILES)
 
 # Rules
 # $(RDIR)/%.Rout: $(RDIR)/%.R 
@@ -61,6 +64,9 @@ slides: $(Q_SLI_OUT_FILES)
 # 	quarto preview $<
 
 $(QSLIFOLD)/%.html: $(QSLIFOLD)/%.qmd
+	quarto render $<
+
+$(QPDFFOLD)/%.pdf: $(QPDFFOLD)/%.qmd
 	quarto render $<
 # # Compile main tex file and show errors
 # $(QSLIFILE).html: $(QSLIFILE).qmd $(OUT_FILES) #$(CROP_FILES)

@@ -1,0 +1,112 @@
+---
+title: "Note 1"
+format:
+    pdf:
+        documentclass: article
+        colorlinks: true
+        # include-in-header: packages.tex
+        keep-tex: true
+        # resource-path: 
+        #     - "Simulations/Products"
+        # latex-output-dir: Output
+number-sections: true
+author: Hans Martinez
+date: today
+# bibliography: biblio.bib
+---
+
+# Profit Maximization
+
+Let $y=f(x)$ be the production function of a firm. The firm faces output prices $p$, and the price of the input $w$. The profit-maximization problem facing the firm can be written as
+
+$$
+\max_x pf(x)-wx
+$$
+
+# Revealed Profitability
+
+When a profit-maximizing firm makes its choice of inputs and outputs it reveals two things: 
+
+1. *feasible* production plan
+1. these choices are more profitable than other feasible choices that the firm could have made
+
+Suppose you observe two choices that the firm makes at two different sets of prices. At time $t$, it faces $(p^t,w^t)$ and makes choices $(y^t,x^t)$. At time $s$, it faces prices $(p^s,w^s)$ and makes choices $(y^s,x^s)$. If the production function of the firms hasn't changed from times $s$ and $t$ and if the firm is a profit maximizer, then we must have
+
+$$
+p^ty^t-w^tx^t\ge p^ty^s-w^tx^s
+$$ {#eq-rev-prof-t}
+
+and
+
+$$
+p^sy^s-w^sx^s\ge p^sy^t-w^sx^t
+$$ {#eq-rev-prof-s}
+
+In other words, the profits that the firm achieved facing the $t$ period prices must be larger than if they used the $s$ period plan and vice versa.
+
+If either of these inequalities were violated, the firm could not have been a profit-maximizer (with an unchanging technology).
+
+The satisfaction of these inequalities might be referred to as the  **Weak Axiom of Profit Maximization (WAPM)**.
+
+These inequalities provide a practical test for the profit-maximization model. In other words, if the inequalities are met we cannot reject the hypothesis that firms are profit-maximizers under unchanging technology and price-taking behavior.
+
+In addition, if the firm's choices satisfy WAPM, we can derive a useful comparative statics statement about the behavior of factor demand and output supplies when prices change. Transpose the two sides of @eq-rev-prof-s to get
+
+$$
+-p^sy^t+w^sx^t\ge -p^sy^s+w^sx^s
+$$ {#eq-rev-prof-s-trans}
+
+and add @eq-rev-prof-s-trans to @eq-rev-prof-t to get
+
+$$
+\begin{aligned}
+(p^t-p^s)y^t-(w^t-w^s)x^t \ge (p^t-p^s)y^s-(w^t-w^s)x^s
+\end{aligned}
+$$ {#eq-rev-prof-both}
+
+Rearrange to get
+
+$$
+(p^t-p^s)(y^t-y^s)-(w^t-w^s)(x^t-x^s) \ge 0
+$$ {#eq-rev-prof}
+
+Finally, define change in prices, $\Delta p=(p^t-p^s)$, change in output $\Delta y = (y^t-y^s)$, and so on
+
+$$
+\Delta p \Delta y - \Delta w \Delta x \ge 0
+$$ {#eq-rev-prof-Delta}
+
+Our final result says that the change in the price of output times the change in output minus the change in the price of input times the change in the input must be non-negative. This equation contains all the comparative statics results about profit maximization.
+
+For example, suppose the price of output changes but the price of the input stays constant. Then, because $\Delta w = 0$, @eq-rev-prof-Delta reduces to
+
+$$
+\Delta p \Delta y \ge 0
+$$ {#eq-rev-prof-Delta-noinput}
+
+Therefore, if the price of output increases, $\Delta p \ge 0$, then the change in output must be non-negative as well, $\Delta y \ge 0$. This says that the profit-maximizing supply curve of a competitive firm must have a positive (or at least zero) slope.
+
+Similarly, if the price of the output remains constant, @eq-rev-prof-Delta becomes
+
+$$
+\begin{aligned}
+ - \Delta w \Delta x &\ge 0 \\
+\Delta w \Delta x &\le 0
+\end{aligned}
+$$ {#eq-rev-prof-Delta-nooutput}
+
+Thus if the price of the input goes up, $\Delta w \ge 0$, then the demand for the input will go down (or at least remain the same), $\Delta x \le 0$. This means that the factor demand curve must be a decreasing function of the input prices: input demand curves have a negative slope.
+
+If we observe a firm's choices, and these choices satisfy WAPM, we can construct an estimate of the technology for which the observed choices are profit-maximizing choices.
+
+Suppose we are given an observed choice in period $t$ and $s$, as above. 
+
+1. Calculate the profits $\pi_s$ and $\pi_t$ and plot all the combinations of $y$ and $x$ that yield these profits.
+
+$$
+\begin{aligned}
+\pi_t&=p^ty-w^tx \\
+\pi_s&=p^sy-w^sx
+\end{aligned}
+$$
+
