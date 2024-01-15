@@ -1,6 +1,6 @@
 ---
 title: "Perfect Competition"
-subtitle: "CH 9"
+subtitle: "Review"
 author: "Hans Martinez"
 institute: "Western University"
 date: ""
@@ -82,7 +82,7 @@ $$ {#eq-perf-comp}
 - The profit maximization condition is
 
 $$
-\frac{dTR(Q)}{dQ}= \frac{dTC(Q)}{Q}
+\frac{dTR(Q)}{dQ}= \frac{dTC(Q)}{dQ}
 $$
 
 - Marginal revenue equals marginal cost
@@ -97,7 +97,7 @@ $$
 
 ## Graphs
 
-![](figures/Picture1.png)
+![](figures/Picture1.png){fig-align="center"}
 
 ## Conditions for an interior optimum
 
