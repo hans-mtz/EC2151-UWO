@@ -120,7 +120,7 @@ $$ {#eq-monopoly-prob}
 
 - MR can be positive or negative
 
-## Marginal Revenue
+## Marginal Revenue {.scrollable}
 
 :::: {.columns}
 ::: {.column width="40%"}
@@ -225,7 +225,7 @@ $$
 ::: {.column}
 - Deadweight Loss of Monopoly (B+C) measures how much worse off people are paying the monopoly price than paying the competitive price
 
-- DWL is equal to the value of loss output by valuing each unit of lost output at the price that people are willing to pay for that unit
+- DWL values each unit of lost output at the price that people are willing to pay for that unit
 
 :::
 ::::
@@ -355,7 +355,7 @@ Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the h
     - $(MRP_L−w)/w=1/\epsilon_{L,w}$
     - where: $\epsilon_{L,w}$ is the price elasticity of labor supply, $(w/L)(dL/dw)$
 
-## Monopsony DWL
+## Monopsony DWL {.scrollable}
 
 :::: {.columns}
 ::: {.column width="30%"}
@@ -389,4 +389,6 @@ Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the h
 - Cartel
 
 ## Taxes and Monopolies
+
+## Monoposony and the Minimum Wage
 
