@@ -12,8 +12,10 @@ format:
 number-sections: true
 author: Hans Martinez
 date: today
-# bibliography: biblio.bib
+bibliography: biblio.bib
 ---
+
+Taken from @Varian2014
 
 # Profit Maximization
 
@@ -110,3 +112,24 @@ $$
 \end{aligned}
 $$
 
+![](figures/rev_prof__2.png)
+
+The points above the isoprofit line for period $t$ represent higher profits than $\pi_t$ at period $t$ prices, the points above the isoprofit line for period $s$ represent higher profits than $\pi_s$ at period $s$ prices.
+
+WAPM requires that the choice in period $t$ must lie below the period $s$ isoprofit line and that the choice in period $s$ must lie below the period $t$ isoprofit line.
+
+If this condition is satisfied, the shaded area beneath the two lines approximates the technology for which $(y^t, x^t)$ and $(y^s, x^s)$ are profit-maximizing choices.
+
+The proof that this technology will generate the observed choices as profit-maximizing choices is clear geometrically. At the prices $(p^t , w^t )$, the choice $(y^t,x^t)$ is on the highest isoprofit line possible, and the same goes for the period $s$ choice.
+
+Thus, when the observed choices satisfy WAPM, we can “reconstruct” an estimate of a technology that might have generated the observations. In this sense, any observed choices consistent with WAPM could be profit- maximizing choices. As we observe more choices that the firm makes, we get a tighter estimate of the production function.
+
+![](figures/rev_prof_n.png)
+
+This estimate of the production function can be used to forecast firm behavior in other environments or for other uses in economic analysis.
+
+
+## References {-}
+
+::: {#refs}
+:::

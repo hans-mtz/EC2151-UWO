@@ -75,6 +75,29 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \makeatletter
 \makeatother
@@ -147,11 +170,13 @@
 
 \title{Note 1}
 \author{Hans Martinez}
-\date{2024-01-10}
+\date{2024-01-15}
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, enhanced, frame hidden, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, interior hidden, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+
+Taken from Varian (2014)
 
 \hypertarget{profit-maximization}{%
 \section{Profit Maximization}\label{profit-maximization}}
@@ -298,6 +323,49 @@ above.
 \pi_s&=p^sy-w^sx
 \end{aligned}
 \]
+
+\includegraphics{figures/rev_prof__2.png}
+
+The points above the isoprofit line for period \(t\) represent higher
+profits than \(\pi_t\) at period \(t\) prices, the points above the
+isoprofit line for period \(s\) represent higher profits than \(\pi_s\)
+at period \(s\) prices.
+
+WAPM requires that the choice in period \(t\) must lie below the period
+\(s\) isoprofit line and that the choice in period \(s\) must lie below
+the period \(t\) isoprofit line.
+
+If this condition is satisfied, the shaded area beneath the two lines
+approximates the technology for which \((y^t, x^t)\) and \((y^s, x^s)\)
+are profit-maximizing choices.
+
+The proof that this technology will generate the observed choices as
+profit-maximizing choices is clear geometrically. At the prices
+\((p^t , w^t )\), the choice \((y^t,x^t)\) is on the highest isoprofit
+line possible, and the same goes for the period \(s\) choice.
+
+Thus, when the observed choices satisfy WAPM, we can ``reconstruct'' an
+estimate of a technology that might have generated the observations. In
+this sense, any observed choices consistent with WAPM could be profit-
+maximizing choices. As we observe more choices that the firm makes, we
+get a tighter estimate of the production function.
+
+\includegraphics{figures/rev_prof_n.png}
+
+This estimate of the production function can be used to forecast firm
+behavior in other environments or for other uses in economic analysis.
+
+\hypertarget{references}{%
+\subsection*{References}\label{references}}
+\addcontentsline{toc}{subsection}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-Varian2014}{}}%
+Varian, Hal R. 2014. \emph{Intermediate Microeconomics with Calculus}.
+NY: W.W. Norton; Company.
+
+\end{CSLReferences}
 
 
 

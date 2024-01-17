@@ -83,7 +83,7 @@ $$ {#eq-monopoly-prob}
 ![](figures/monopolist_optimality.png){#fig-opt-cond fig-align="center"}
 
 [
-    [Elasticity](#elasticity-of-demand-1)
+    [&olarr; Elasticity](#price-elasticity-demand)
 ]{.footer}
 
 ## Marginal Revenue
@@ -244,7 +244,7 @@ $$
 
 ![](figures/supply_curve_mono.png){fig-align="center"}
 
-## Elasticity of Demand
+## Price Elasticity of Demand
 
 $$
 \begin{aligned}
@@ -256,9 +256,13 @@ $$
 \end{aligned}
 $$
 
-Last line follows because price elasticity of demand $\epsilon_{Q,P}<0$
+[Last line follows because price elasticity of demand $\epsilon_{Q,P}<0$]{.aside}
 
-## Elasticity of Demand
+[
+    [&#10148; Elasticity Refresher](#app-e_QP)
+]{.footer}
+
+## Price Elasticity of Demand {#price-elasticity-demand}
 
 | Elasticity | Marginal Revenue | Output and Profits |
 |:----------:|:--:|:-----------------:|
@@ -269,7 +273,7 @@ Last line follows because price elasticity of demand $\epsilon_{Q,P}<0$
 : Elasticity of Demand {#tbl-elasticity}
 
 [
-    [Optimality Condition Graph](#optimality-condition-1)
+    [&#10148; Optimality Condition Graph](#optimality-condition-1)
 ]{.footer}
 
 ## Elastic Part of the Curve
@@ -296,11 +300,11 @@ $$
 \frac{(𝑃^∗−𝑀C^∗)}{𝑃^∗} =\frac{1}{ |\epsilon_{𝑄,𝑃}| }
 $$
 
-Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the higher the optimal markup
+**Inverse elasticity pricing rule (IEPR):** The less price elastic the demand, the higher the optimal markup
 
 ## Demand Elasticity {.centered}
 
-![Market B is less price elastic than A, thus the markup is higher in B than in A](figures/elasticity_mono.png)
+![Market B is less price elastic than A, thus the markup is higher in B than in A](figures/markups_elasticity.png)
 
 ## Market Power
 
@@ -324,16 +328,32 @@ Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the h
 
 ## Why Monopolies Exist?
 
-- Read Ch. 11.6
+:::: {.columns}
+::: {.column width="30%"}
+- A market is a natural monopoly if the total cost incurred by a single firm producing output is less than the combined total cost of two or more firms producing this same level of output among them
 
-- Natural Monopolies
+- Necessary conditions
     - Economies of scale
     - Demand
+:::
+::: {.column width="70%"}
+![It is cheaper for 1 firm to produce 9 than for two to produce 4.5](figures/natural_mono.png)
+:::
+::::
 
-- Barriers to entry
-    - Structural
-    - Legal
-    - Strategic
+## Barriers to entry
+
+- Factors that allow an incumbent firm to earn positive economic profits while making it unprofitable for newcomers to enter the industry
+
+- **Structural** barriers to entry occur when incumbent firms have cost
+or demand advantages that would make it unattractive for a new firm to
+enter the industry
+
+- **Legal** barriers to entry exist when an incumbent firm is legally
+protected against competition
+
+- **Strategic** barriers to entry result when an incumbent firm takes
+explicit steps to deter entry
 
 ## Monopsony
 
@@ -372,7 +392,7 @@ Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the h
 :::
 ::::
 
-# Problems
+# Problems {.title}
 
 ## Comparative Statics
 
@@ -391,4 +411,57 @@ Inverse elasticity pricing rule (IEPR): The less price elastic the demand, the h
 ## Taxes and Monopolies
 
 ## Monoposony and the Minimum Wage
+
+# Appendix {.title}
+
+## Price Elasticity of Demand [REVIEW]{.small} {#app-e_QP}
+
+::: {.nonincremental}
+- The price elasticity of demand is the percentage change in quantity demanded due to a one-percent change in the price of the good
+
+- $\epsilon_{Q,P}=\frac{Δ𝑄/𝑄}{Δ𝑃/𝑃}=\frac{Δ𝑄}{Δ𝑃}\frac{𝑃}{𝑄}$
+
+- Elasticity is not the slope:
+
+    - Slope measures the *absolute change* in quantity due to *one-unit* change price $(Δ𝑄⁄Δ𝑃)$
+
+    - Elasticity measures the relative (or percentage) change in quantity due to *one percent* change price
+:::
+
+## Price Elasticity of Demand
+
+| $ϵ_{Q,P}$ | Classification | Meaning                 |
+|:------------------:|:--------------:|:------------------------|
+|$|ϵ_{Q,P}|<1$ | Inelastic demand	| Quantity demanded is relatively insensitive to price. |
+| $|ϵ_{Q,P}|\ge1$| Elastic demand | Quantity demanded is relatively sensitive to price.|
+$|ϵ_{Q,P}|=\infty$ | Perfectly elastic demand | Any increase in price results in quantity demanded decreasing to zero, and any decrease in price results in quantity demanded increasing to infinity. |
+
+## Price Elasticity of Demand
+
+![](figures/e_QP.png){fig-align="center"}
+
+## Elasticity - Linear Demand
+
+:::: {.columns}
+::: {.column width="30%"}
+::: {.nonincremental}
+
+- $P=\frac{a}{b}-\frac{Q}{b}$
+
+- $𝜀_{Q,P}=−b(𝑃/𝑄)$
+
+- Elasticity falls from 0 to $-\infty$ along the linear demand curve, but the slope is constant
+
+:::
+:::
+::: {.column width="70%"}
+![](figures/e_QP_linear_demand.png){fig-align="center" width="100%"}
+
+:::
+::::
+
+[
+    [&olarr; Back](#price-elasticity-of-demand)
+]{.footer}
+
 

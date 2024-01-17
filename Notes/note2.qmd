@@ -1,0 +1,72 @@
+---
+title: "Note 2"
+format:
+    pdf:
+        documentclass: article
+        colorlinks: true
+        # include-in-header: packages.tex
+        keep-tex: true
+        # resource-path: 
+        #     - "Simulations/Products"
+        # latex-output-dir: Output
+number-sections: true
+author: Hans Martinez
+date: today
+bibliography: biblio.bib
+---
+
+# Perfect Competition and Productivity
+
+Price-taking firms in an industry have the same technology but different productivity. That is firms produce output $Q$, with one input $L$, given the production function, $Q=A_i L^{\alpha}$, where $\alpha<1$ and $A_i\ge1$. In other words, their production function is the same but differs in one parameter, $A_i$. In this framework, the parameter $A_i$ is the productivity of firm $i$.
+
+Output price is $P$ and input price is $w$. The profit-maximization problem of the firm is
+
+$$
+\max_{L} \pi(L) = PA_i L^{\alpha}-wL
+$$ {#eq-prof-max-prob}
+
+Then, the optimality condition yields
+
+$$
+\alpha P A_i L^{\alpha-1} = w
+$$
+
+Rearranging and solving for $L$ (remember $\alpha<1$), we get
+
+$$
+L_i^*=\left(\frac{\alpha P A_i}{w}\right)^{\frac{1}{1-\alpha}}
+$$ {#eq-input-demand}
+
+@eq-input-demand is the input demand of firm $i$. Input demand is increasing in the output price and productivity, but it is decreasing in the input price. In other words, the higher the output price or the productivity, the higher the quantity of inputs the firms will consume. On the other hand, the higher the input price the less of the input the firm will consume.
+
+With the input demand at hand, we can find the optimal output quantity and the profits of the firm.
+
+Plugging @eq-input-demand into the production function we get the optimal output quantity,
+
+$$
+Q_i^* = A_i^{\frac{1}{1-\alpha}} \left(\frac{\alpha P}{w}\right)^{\frac{\alpha}{1-\alpha}}
+$$ {#eq-optimal-output}
+
+Using the optimal output, we can find the profits of the firm by plugging @eq-optimal-output into the profit function,
+
+$$
+\pi_i^*=A_i^{\frac{1}{1-\alpha}}\left(\frac{ P}{w^{\alpha}}\right)^{\frac{1}{1-\alpha}}(\alpha^{\frac{\alpha}{1-\alpha}}-\alpha^{\frac{1}{1-\alpha}})
+$$ {#eq-opt-profits}
+
+Suppose there are only two firms in the industry, but they are still price takers. So, we are still in a perfectly competitive market, but firm 1 is more productive than firm 2, $A_1 >A_2$.
+
+Then, given @eq-input-demand, [-@eq-optimal-output], and [-@eq-opt-profits], we can conclude that the more productive firm, firm 1, consumes more inputs $L_1>L_2$, produces more output $Q_1>Q_2$, and has higher profits $\pi_1>\pi_2$ than firm 2.
+
+Moreover, their market shares are a function of only their productivities. The market share of firm $i$ is $s_i=\frac{Q_i}{Q_1+Q_2}$. Plugging in @eq-optimal-output, we get 
+
+
+$$
+s_i=\frac{1}{1+\left(\frac{A_j}{A_i}\right)^{\frac{1}{1-\alpha}}}
+$$ {#eq-mkt-shr}
+
+So, for firm 1
+$$
+s_1=\frac{1}{1+\left(\frac{A_2}{A_1}\right)^{\frac{1}{1-\alpha}}}
+$$
+
+@eq-mkt-shr says that the higher the productivity of firm $i$, relative to the productivity of the other firm $j$, the higher the market share she will get. To see this, note that $A_2 < A_1 \implies \frac{A_2}{A_1} < 1$. As this term $\frac{A_j}{A_i}$ goes to zero, the market share $s_i$ gets closer to 1. Put differently, a firm's market share depends on how much more productive it is than its competitors.
