@@ -328,18 +328,16 @@ $$
 
 ## Why Monopolies Exist?
 
-:::: {.columns}
-::: {.column width="30%"}
-- A market is a natural monopoly if the total cost incurred by a single firm producing output is less than the combined total cost of two or more firms producing this same level of output among them
+- A market is a *natural monopoly* if the total cost incurred by a single firm producing output is less than the combined total cost of two or more firms producing this same level of output among them
 
 - Necessary conditions
     - Economies of scale
     - Demand
-:::
-::: {.column width="70%"}
-![It is cheaper for 1 firm to produce 9 than for two to produce 4.5](figures/natural_mono.png)
-:::
-::::
+
+## Natural Monopoly
+
+![It is cheaper for 1 firm to produce 9 than for two to produce 4.5](figures/natural_mono.png){fig-align="center"}
+
 
 ## Barriers to entry
 
