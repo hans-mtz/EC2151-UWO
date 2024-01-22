@@ -365,6 +365,10 @@ explicit steps to deter entry
     - $P \times MP_L = dTC/dL$
     - $P (dQ/dL) = w + L (dw/dL)$
 
+## Monopsony
+
+![](figures/monopsony_me.png){fig-align="center"}
+
 ## Inverse Elasticity Pricing Rule
 
 - Monopsony equilibrium condition results in:
