@@ -1,0 +1,145 @@
+---
+title: "Note 3"
+format:
+    pdf:
+        documentclass: article
+        colorlinks: true
+        # include-in-header: packages.tex
+        keep-tex: true
+        # resource-path: 
+        #     - "Simulations/Products"
+        # latex-output-dir: Output
+number-sections: true
+author: Hans Martinez
+date: today
+bibliography: biblio.bib
+---
+## The Impact of Taxes on a Monopolist[^taken]
+
+[^taken]: Examples expanded from @Varian2014 p. 464.
+
+Consider a firm with constant marginal costs, $MC=c$, that faces a linear demand, $P=a-bQ$. What happens to the price charged when a quantity tax $t$ is imposed? 
+
+The marginal cost goes up by the amount of the tax, $MC=c+t$. The intersection of marginal revenue, $MR=a-2bQ$, and marginal cost moves to the left.
+
+Algebraically, the optimality condition becomes now
+$$
+a-2bQ=c+t
+$$
+
+Solving for Q,
+
+$$
+Q=\frac{a-c-t}{2b}
+$$ {#eq-opt-q}
+
+Thus, the change in output due to a change in the quantity tax is
+
+$$
+\frac{dQ}{dt}=-\frac{1}{2b}
+$$
+
+Plugging @eq-opt-q into the demand curve
+
+$$
+P=\frac{a+c+t}{2}
+$$ {#eq-opt-p}
+
+Taking the derivative of @eq-opt-p with respect $t$, we get
+
+$$
+\frac{dP}{dt}=\frac{1}{2}
+$$
+
+Since the demand curve is half as steep as the marginal revenue curve, the price goes up by half the amount of the tax. This happens because of the assumptions of the linear demand curve and constant marginal costs. These assumptions imply that the price will increase by *less than the tax increase*. Is this likely to be true in general?
+
+Consider now the case of a monopolist facing a constant-elasticity demand curve, $P=aQ^{-b}$. The price elasticity of demand is
+
+$$
+\begin{aligned}
+\epsilon_{Q,P}&=\frac{dQ}{dP}\frac{P}{q}\\
+    &=-baP^{-b-1}\frac{P}{aQ^{-b}}\\
+    &=-b
+\end{aligned}
+$$
+
+Then, the marginal revenue in terms of the price elasticity of demand now becomes 
+
+$$
+\begin{aligned}
+MR&=P\left(1-\frac{1}{ |\epsilon_{Q,P}| }\right)\\
+    &=P\left(1-\frac{1}{ |b| }\right)
+\end{aligned}
+$$ 
+
+Next, using the optimality condition and solving for price,
+
+$$
+\begin{aligned}
+P\left(1-\frac{1}{ |\epsilon_{Q,P}| }\right)&=c+t\\
+    P&=\frac{c+t}{\left(1-\frac{1}{ |b| }\right)}
+\end{aligned}
+$$ 
+
+so that,
+$$
+\frac{dP}{dt}=\frac{1}{\left(1-\frac{1}{ |b| }\right)}
+$$ {#eq-dpdt-e}
+
+Because the monopolist will never operate in the inelastic part of the demand, $|b| >1$, then $\frac{dP}{dt}> 1$. @eq-dpdt-e says that, in this case, the monopolist will increase the price *more than the amount of the tax*.
+
+Another kind of tax we can consider is the profit tax. In this case, the monopolist is required to pay a fraction $\tau$ of its profits, to the government. In addition, the monopolist is only allowed to deduct a fraction $\lambda\le1$ of its total costs from total revenues. 
+
+The maximization problem that the monopolist faces is then
+
+$$
+\max_{Q} (1-\tau)[TR(Q)-\lambda TC(Q)] - (1-\lambda) TC(Q)
+$$ {#eq-profit-tax}
+
+Taking the derivative with respect to $Q$, the optimality condition becomes
+
+$$
+\frac{dTR}{dQ} = \frac{dTC}{dQ}\left(\lambda + \frac{1-\lambda}{1-\tau}\right)
+$$ {#eq-foc-profit-tax}
+
+@eq-foc-profit-tax looks familiar. Our well-known optimality condition now contains a *wedge*, $\left(\lambda + \frac{1-\lambda}{1-\tau}\right)$, multiplying the marginal cost.
+
+Suppose the demand is linear, $P=a-bQ$, and the marginal costs are constant, $\frac{dTC}{dQ}=c$, then the optimal quantity and price become
+
+$$
+Q^*=\frac{a-c\left(\lambda + \frac{1-\lambda}{1-\tau}\right)}{2b}
+$$
+
+$$
+P^*=\frac{a+c\left(\lambda + \frac{1-\lambda}{1-\tau}\right)}{2b}
+$$
+
+Now the optimal decision of the firm depends on the profit tax $\tau$ and the fraction of the costs the firm is allowed to deduct $\lambda$.
+
+If $\lambda=1$, then the optimal price and quantities do not change from the case where there is no profit tax. In other words, if the firm is allowed to deduct all of its costs from total revenue for tax purposes, then the same choice of quantity and price that maximizes its profits under no profit tax also maximizes its profits under such a tax.
+
+Another peculiar case is where $\lambda=\tau$. In this case, the marginal cost wedge becomes $(\lambda+1)>1$ (or $\tau+1$, since they are equal). So, the firm's marginal cost increases by $(\lambda+1)$. Thus, 
+
+$$
+\frac{dP}{d\tau}=\frac{dP}{d\lambda}=\frac{c}{2}>0
+$$
+
+For a one percentage point increase of the profit tax (or the fraction of the deductible cost), the monopolist will increase the price by half the marginal cost.
+
+If $\lambda\not=\tau$, the marginal cost increases by $\left(\lambda + \frac{1-\lambda}{1-\tau}\right)>1$.
+
+So we have,
+
+$$
+\begin{aligned}
+\frac{dP}{d\lambda} &= -\frac{c\tau}{2(1-\tau)} < 0\\
+\frac{dP}{d\tau} &= \frac{c(1-\lambda)}{2(1-\tau)^2} > 0
+\end{aligned}
+$$ {#eq-dpdt-profit}
+
+These equations indicate that, holding the profit tax constant, the price will decrease as the firm is allowed to deduct a greater fraction of its total costs. Likewise, holding the deductible fraction of total costs constant, a greater profit tax will increase the price.
+
+## References {-}
+
+::: {#refs}
+:::

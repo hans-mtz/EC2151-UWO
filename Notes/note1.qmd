@@ -15,9 +15,10 @@ date: today
 bibliography: biblio.bib
 ---
 
-Taken from @Varian2014
+# Profit Maximization[^source]
 
-# Profit Maximization
+[^source]: Example and figures taken from @Varian2014
+
 
 Let $y=f(x)$ be the production function of a firm. The firm faces output prices $p$, and the price of the input $w$. The profit-maximization problem facing the firm can be written as
 

@@ -252,11 +252,9 @@ $$
     &=P\left(1+\frac{Q}{P}\frac{dP(Q)}{dQ} \right)\\
     &=P\left(1+\frac{1}{\frac{P}{Q}\frac{dQ}{dP}}\right)\\
     &=P\left(1+\frac{1}{\epsilon_{Q,P}}\right) \\
-    &=P\left(1-\frac{1}{|\epsilon_{Q,P}|}\right)
+    &=P\left(1-\frac{1}{|\epsilon_{Q,P}|}\right) \text{(because $\epsilon_{Q,P}<0$)}
 \end{aligned}
 $$
-
-[Last line follows because price elasticity of demand $\epsilon_{Q,P}<0$]{.aside}
 
 [
     [&#10148; Elasticity Refresher](#app-e_QP)
@@ -394,17 +392,20 @@ explicit steps to deter entry
 
 ## Comparative Statics
 
-- Shifts in demand
-    - Shifting intercept up or down
-
-- Shifts in MC
+- Shifting intercept up or down (linear curves)
+    - Shifts in demand  
+    - Shifts in MC
+        - Upward sloping
+        - Downward sloping
 
 - Constant MC and linear demand (Monopoly Midpoint Pricing Rule)
 
-## Monopolies with Multiple Plants
+## Monopolies with Multiple Plants and Markets
 
-- Two markets
-- Cartel
+- Two plants, one demand
+    - Cartel: A group of producers that collusively determines the price and output in a market
+    - Same problem: allocating output across its plants
+- Two markets (demand curves), one price
 
 ## Taxes and Monopolies
 
