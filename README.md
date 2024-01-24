@@ -2,8 +2,13 @@
 
 EC2151B002, Winter 2024, UWO
 
-[Introduction](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/intro.html)
+Week 1
+- [Introduction](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/00-intro.html)
 
-[Perfect Competition](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/perfect-comp.html)
+- [Perfect Competition](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/01-perfect-comp.html)
 
-[Monopoly](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/market_power.html)
+Week 2-3
+- [Monopoly](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/02-market_power.html)
+
+Week 3-4
+- [Extracting Surplus](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/03-monopolistic_behavior.html)

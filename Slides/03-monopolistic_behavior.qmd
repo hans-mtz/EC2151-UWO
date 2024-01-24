@@ -1,0 +1,468 @@
+---
+title: "Monopolistic Behavior"
+subtitle: "Besanko and Braeutigam, CH 12"
+author: "Hans Martinez"
+institute: "Western University"
+date: ""
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: true
+    incremental: true
+    theme: [simple, theme.scss]
+    width: 1260
+    height: 700
+    embed-resources: true
+    navigation-mode: linear
+    # revealjs-plugins:
+    #   - fullscreen
+    # include-in-header: packages.tex
+    # css: [style.css, xaringan-themer.css]
+    # logo: images/quarto.png
+    # footer: <https://quarto.org>
+# resources:
+#   - Paper/WP-LCFI.pdf
+# bibliography: biblio/lcfi.bib
+---
+## Capturing Surplus
+
+- First-Degree Price Discrimination: Making the Most from Each Consumer
+
+- Second-Degree Price Discrimination: Quantity Discounts
+
+- Third-Degree Price Discrimination: Different Prices for Different
+Market Segments
+
+- Tying (Tie-In Sales), Bundling
+
+- Advertising
+
+## Uniform Price Vs. Price Discrimination
+
+- A monopolist charges a uniform price if it sets the same price for every unit of output sold
+
+- While the monopolist captures profits due to an optimal uniform pricing policy
+
+    - It does not receive the consumer surplus or dead-weight loss associated with this policy
+
+- A firm with market power may be able to increase its profits by charging more than one price for its product through price discrimination
+
+
+## Forms of Price Discrimination
+
+- A policy of first-degree (or perfect) price discrimination prices each unit sold at the consumer's maximum willingness to pay
+
+    - This willingness to pay is directly observable by the monopolist
+
+- A policy of second-degree price discrimination allows the monopolist to offer consumers a quantity discount
+
+    - Two part tariffs
+
+- A policy of third-degree price discrimination offers a different price for each segment of the market (or each consumer group) when membership in a segment can be observed
+
+## Conditions
+
+Certain market features must be present for a firm to capture more surplus with price discrimination:
+
+@. A firm must have some market power to price-discriminate
+    -  the demand curve the firm faces must be downward sloping
+    - If the firm is a price taker it cannot set different prices for different units of output
+
+## Conditions
+
+@. The firm must have some information about the different amounts people will pay for its product
+    - reservation prices or elasticities of demand across consumers
+
+@. A firm must be able to prevent resale or arbitrage
+    - A reseller might capture the surplus instead of the firm
+
+## Willingness to Pay Curve
+
+- The demand curve is the *willingness to pay* curve
+
+- Since the demand curve slopes downward, the consumer buying the first unit is willing to pay a higher price than the consumer buying the second unit
+
+- If the seller can perfectly implement first-degree price discrimination, it will price each unit at the maximum amount the consumer of that unit is willing to pay
+
+## Uniform Price Vs. Price Discrimination
+
+![](figures/ch12-1dpd.png){fig-align="center"}
+
+## Pareto Efficiency
+
+- The producer sells each unit to the consumer with the highest reservation price for that unit, at that price
+
+- The monopolist will continue selling units until the reservation price exactly equals the marginal cost
+
+- The producer captures all the surplus and there is no deadweight loss
+
+- Perfect first-degree price discrimination therefore leads to an economically efficient level of output!
+
+## Caveats
+
+- In the real world, it is harder to learn about willingness to pay
+
+- If you ask a customer about her willingness to pay, she will not reveal her reservation price
+    - A consumer would like to tell you that she has a low willingness to pay so that she can capture some consumer surplus herself
+
+## Caveats
+
+- Often sellers can learn something about willingness to pay based on 
+    - knowledge of where a person lives and works, 
+    - how she dresses or speaks, 
+    - the kind of car she drives, or 
+    - how much money she makes
+
+- The information may not perfectly reveal a consumer's willingness to pay, but it can help the seller to capture more surplus than it could without such information
+
+## Uniform vs. 1st Degree Pricing
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- Suppose a monopolist has a constant marginal cost MC = 2 and faces the demand curve P = 20 − Q
+
+- Uniform pricing surplus?
+
+- First-degree price discrimination surplus?
+:::
+
+::: {.column width="70%"}
+![](figures/ch12-1dpd-ex.png){#fig-1dpd fig-align="center" width="100%"}
+:::
+
+::::
+
+
+## Marginal Revenue Curve
+
+- With uniform pricing, $MR=P+\frac{dP}{dQ}Q$
+
+- With perfect first-degree price discrimination, only the first effect is present
+
+- When the firm sells one more unit, it does not have to reduce its price on all the other units it is already selling
+
+- So the marginal revenue curve with first-degree price discrimination is just $MR = P$
+
+- The marginal revenue curve equals the demand curve
+
+## Second Degree Price Discrimination
+
+- A policy of second-degree price discrimination allows the monopolist to charge a different price to different consumers
+
+- While different consumers pay different prices, the reservation price of any one consumer cannot be directly observed
+
+## Second Degree Price Discrimination
+
+- Sellers know that each customer's demand curve for a good is typically downward-sloping
+
+    - the customer's willingness to pay decreases as successive units are purchased
+
+- A seller may use this information to capture extra surplus by offering quantity discounts to consumers
+
+- Not every form of quantity discounting represents price discrimination. Often sellers offer quantity discounts because it costs them less to sell a larger quantity
+
+## Second Degree Price Discrimination
+
+- One distinguishing feature of second-degree price discrimination is that the amount consumers pay for the good or service actually depends on two or more prices (parts)
+
+- For example, telecommunication services work under a multipart tariff:
+a subscription charge plus a usage charge
+
+## Block Tariff
+
+- If a consumer pays one price for one block of output and another price for another block of output, the consumer faces a block tariff
+
+- Firm's objective is to maximize profits by choosing the optimizing quantity at each block (therefore looking for the optimal block price)
+
+## Block Tariff
+
+:::: {.columns}
+
+::: {.column width="30%"}
+- The monopolist might capture additional surplus by offering a quantity discount
+
+- Charge a price for the first units (11) and a lower price (8) for any additional units
+
+- What's the optimal block tariff?
+
+:::
+
+::: {.column width="70%"}
+![](figures/ch12-2dpd.png){fig-align="center" width="100%"}
+:::
+::::
+
+## Block Tariff 
+
+![](figures/ch12-2dpd-opt-p.png){fig-align="center"}
+
+[Show mathematically on the board]{.small}
+
+## Average Outlay
+
+Consumer's average expenditure, *average outlay*, is total expenditure $E$ divided by total quantity $Q$
+
+In our previous example, 
+$$
+E = 
+\begin{cases} 
+\$14Q, & \text{if } Q \leq 6 \\
+\$84 + \$8(Q-6), & \text{if } Q > 6 
+\end{cases}
+$$
+
+So, the consumer's average outlay is
+$$
+\frac{E}{Q} = 
+\begin{cases} 
+\$14, & \text{if } Q \leq 6 \\
+\frac{\$84 + \$8(Q-6)}{Q}, & \text{if } Q > 6 
+\end{cases}
+$$
+
+## Average Outlay
+
+:::: {.columns}
+::: {.column}
+- Second Degree Price Discrimination results in a **non-linear outlay schedule**
+
+    - The average outlay changes as the number of units purchased changes
+:::
+::: {.column}
+![](figures/ch12-ao-graph.png){fig-align="center"}
+:::
+:::: 
+
+
+## Self Select
+
+- The problem with first-degree price discrimination is that the high-willingness-to-pay person may *pretend* to be the low-willingness-to-pay person
+    - The seller might not tell them apart effectively
+
+- By offering two different price-quantity packages in the market,   
+    - one targeted to the high-demand and the other targeted to the low-demand person, 
+    - the seller might induce the consumers to choose the package meant for them: **self select**
+
+
+## Self Select
+
+:::: {.columns}
+::: {.column width="30%"}
+- Self Selection
+
+- Pareto superior allocation
+:::
+::: {.column width="70%"}
+![](figures/ch12-self-select.png){fig-align="center"}
+:::
+:::: 
+
+## Subscription and Usage Tariff
+
+- A monopolist charges a two-part tariff if it charges a per unit fee, $r$, plus a lump sum fee (paid whether or not a positive number of units is consumed), $F$
+
+$$
+    T=F+rQ
+$$
+
+- This, effectively, charges demanders of a low quantity a different
+average price than demanders of a high quantity
+
+- Example: include hook-up charge plus usage fee for a telephone, club membership, and so on
+
+## Subscription and Usage Tariff
+
+- All customers are identical
+
+    - P = 100 - Q
+
+    - MC = AC = 10
+
+- What is the optimal two-part tariff?
+
+- Two steps: [Draw graph on the board]{.small}
+
+    - Maximize the benefits to the consumers by charging r = MC = 10
+
+    - Capture this benefit by setting F = consumer benefits = 4050
+
+
+## Subscription and Usage Tariff
+
+- Any higher usage charge would result in a dead-weight loss that could not be captured by the monopolist
+
+- Any lower usage charge would result in selling at less than marginal cost
+
+- In essence, the monopolist maximizes the surplus, then
+sets the lump sum fee to capture the entire surplus for itself
+
+- The total surplus captured is the same as in the case of perfect price discrimination
+
+## In the Real World
+
+- In the real world, the firm cannot so easily capture all the surplus, for two reasons:
+
+1. Demand differs from one consumer to the next. High subscription and usage tariffs might capture more surplus from large-demand consumers, but small-demand consumers will not buy the service at all
+
+2. The firm cannot tell apart large from small-demand consumers. Firms need to offer customers a menu of subscription and usage charges to incentivize them to self-select
+
+## Third Degree Price Discrimination
+
+- If a firm can identify different consumer groups, or segments, in a market and can estimate each segment's demand curve, the firm can practice third-degree price discrimination by setting a profit-maximizing price for each segment
+
+- Example: Movie ticket sales to senior citizens or students at a discount
+
+- How does a monopolist maximize profit with this type of price
+discrimination?
+
+## Third Degree Price Discrimination
+
+The optimal pricing maximizes the monopolist's profits
+$$
+\max_{Q_1,Q_2} P_1(Q_1)Q_1 + P_2(Q_2)Q_2- C(Q_1+Q_2)
+$$
+
+$P_i(Q_i)$ denote the inverse demand curves of group $i$
+
+## Third Degree Price Discrimination: Optimal Pricing
+
+The optimal solution must have
+$$
+\begin{aligned}
+    MR_1(Q_1)&=MC(Q_1+Q_2) \\
+    MR_2(Q_2)&=MC(Q_1+Q_2)
+\end{aligned}
+$$
+
+- The marginal cost of producing an extra unit of output must be equal to the marginal revenue in **each** market
+
+## Third Degree Price Discrimination: Optimal Pricing
+
+- In other words, the monopolist maximizes total profits by maximizing profits from each group individually
+
+- Since marginal cost is the same in each market, $MR_1=MR_2=MC$
+
+- Otherwise, the monopolist could raise revenues by switching sales
+from the low MR group to the high MR group
+
+## Third Degree Price Discrimination
+
+![](figures/ch12-3dpd.png){fig-align="center"}
+
+## Third Degree Price Discrimination
+
+- Note that the price is higher in the lower elasticity demand than in the high elasticity demand
+
+- A firm that price discriminates will set a low price for the price-sensitive group and a high price for the group that is relatively price-insensitive
+
+- Senior citizens and students are more likely to be price-sensitive than the average consumer
+
+[Show mathematically on the board]{.small}
+
+## Screening
+
+Sorting consumers based on a consumer characteristic that 
+
+1. the firm can see (such as age or status) and 
+
+1. is strongly related to a consumer characteristic that the firm cannot see but would like to observe (such as willingness to pay or elasticity of demand)
+
+- Screening Mechanisms: Intertemporal Price Discrimination, Coupons and Rebates
+
+## Third Degree Price Discrimination 
+
+- MC = AC = 20
+
+- P~1~ = 100 - Q~1~
+
+- P~2~ = 80 - 2Q~2~
+
+- MR~1~ = 100 - 2Q~1~ = MC = 20
+
+- MR~2~ = 80 - 4Q~2~ = MC = 20
+
+- Q~1~\* = 40
+
+- Q~2~\* = 15
+
+- P~1~\* = 60
+
+- P~2~\* = 50
+
+## Examples
+
+- Inverse elasticity pricing
+
+- Capacity constraints
+
+## Versioning
+
+
+## Tie-in Sales -- Requirements
+
+- A tie-in sale occurs if a customer can buy one product only if they
+agree to purchase another product as well
+
+- Requirements tie-in sales occur when a firm requires customers who buy one product from the firm to buy another product from the firm
+
+- A requirements tie-in sale may be used in place of price discrimination when the firm cannot observe the relative willingness to pay of different customers
+
+## Tie-in Sales -- Bundling
+
+- Package tie-in sales (or bundling) occur when goods are combined so
+that customers cannot buy either good separately
+
+- Bundling may be used in place of price discrimination to increase
+producer surplus when consumers have different willingness to pay for
+the goods sold in the bundle
+
+- But bundling does not always pay
+
+## Bundling: Negatively Correlated Preferences
+
+- Without bundling: pc = \$1500 pm = \$600
+
+- Profit cm = \$800
+
+- With bundling: pb = \$1800
+
+- Profit b = \$1000
+
+## Bundling: Positively Correlated Preferences
+
+- Without bundling: pc = \$1500  
+pm = \$600
+
+- Profit cm = \$800
+
+- With bundling: pb = \$2100
+
+- Profit b = \$800
+
+- In general, bundling a pair of goods only pays if their demands are
+negatively correlated
+
+- Customers who are willing to pay relatively more for good A are not
+willing to pay as much for good B
+
+## Reservation Price
+
+- The reason is that the price is determined by the purchaser with the lowest reservation price
+
+- If reservation prices for the two goods are negatively correlated,
+bundling reduces the dispersion of reservation prices and so raises the price at which additional units can be sold
+
+## Effects of Advertising
+
+- The firm can capture surplus using nonprice strategies such as
+advertising
+
+- When the firm does not advertise, its maximum profit is areas I + II
+
+- When the firms spends A~1~ dollars on advertising, its maximum profit is areas II + III
+

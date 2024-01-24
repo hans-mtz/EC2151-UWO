@@ -1,0 +1,137 @@
+---
+title: "Perfect Competition"
+subtitle: "Review"
+author: "Hans Martinez"
+institute: "Western University"
+date: ""
+date-format: long
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: true
+    incremental: true
+    theme: [simple, theme.scss ]
+    width: 1260
+    height: 700
+    embed-resources: true
+    navigation-mode: linear
+    # revealjs-plugins:
+    #   - fullscreen
+    # include-in-header: packages.tex
+    # css: [style.css, xaringan-themer.css]
+    # logo: images/quarto.png
+    # footer: <https://quarto.org>
+# resources:
+#   - Paper/WP-LCFI.pdf
+# bibliography: biblio/lcfi.bib
+---
+## Perfect Competition (Review)
+
+- What is Perfect Competition?
+- Profit Maximization by a Price-Taking Firm
+- Functional Forms
+- Revealed Profitability
+- Supply Curve of a Firm
+
+## Perfectly Competitive Markets
+
+- A perfectly competitive market consists of firms that produce **identical products** that sell at the **same price**
+
+- Each firm’s volume of output is so small in comparison to the overall market demand that **no single firm has an impact on the market price**
+
+## Perfectly Competitive Markets - Conditions
+
+(@) The industry is **fragmented**
+    - It consists of many buyers and sellers
+
+(@) Firms produce **undifferentiated** products
+    - Consumers perceive the products to be identical no matter who produces them
+
+## Perfectly Competitive Markets - Conditions
+
+(@) Consumers have **perfect information** about prices
+    - The industry is characterized by equal access to resources
+
+(@) All firms —incumbents and prospective entrants— have access to the **same technology** and inputs
+
+## Implications of Conditions
+
+- The first characteristic implies that sellers and buyers act as **price-takers**
+
+- The second and third characteristics imply a law of **one price**
+
+- The fourth characteristic implies that the industry is characterized by **free entry**
+
+## The Profit Maximization Hypothesis
+
+$$
+\begin{align}
+\max_{Q} \pi(Q)&=TR(Q)-TC(Q) \\
+\text{s.t. } Q&\ge0
+\end{align}
+$$ {#eq-perf-comp}
+
+- Economic Profit = Sales Revenue - Economic (Opportunity) Cost
+
+- firm sells output Q; TR(Q), revenue from selling the quantity; TC(Q), economic cost of producing the quantity Q
+
+## The Profit Maximization Condition Continued
+
+- The profit maximization condition is
+
+$$
+\frac{dTR(Q)}{dQ}= \frac{dTC(Q)}{dQ}
+$$
+
+- Marginal revenue equals marginal cost
+
+## Functional Forms
+
+- We can define our problem in several ways depending on the question we're interested in
+
+1. Output quantities: $TR(Q)=PQ$ and $TC(Q)$
+
+1. Input quantities: $TR(K,L)=Pf(K,L)$ and $TC(K,L)=rK+wL$
+
+## Graphs
+
+![](figures/Picture1.png){fig-align="center"}
+
+## Conditions for an interior optimum
+
+- $\frac{dTC(Q)}{Q}$ should be increasing
+
+- $\frac{df(\bar K,L)}{dL}$ should be decreasing
+
+## Revealed Profitability
+
+
+
+## Supply Curve of a firm
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+- The firm’s (short-run) supply function is defined by:
+
+1. P=SMC, where SMC slopes upward as long as P > Ps
+
+1. 0 where P < Ps
+
+:::
+::: {.column width="60%"}
+
+![](figures/Picture2.png)
+
+:::
+
+::::
+
+## Review Questions
+
+- Productivity
+
+- Carbon tax 
