@@ -11,4 +11,4 @@ Week 2-3
 - [Monopoly](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/02-market_power.html)
 
 Week 3-4
-- [Extracting Surplus](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/03-monopolistic_behavior.html)
+- [Capturing Surplus](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/03-monopolistic_behavior.html)
