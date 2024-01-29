@@ -352,7 +352,7 @@ from the low MR group to the high MR group
 
 ## Third Degree Price Discrimination
 
-![](figures/ch12-3dpd.png){fig-align="center"}
+![](book-figures/c12/c12f007.png){fig-align="center"}
 
 ## Third Degree Price Discrimination
 
@@ -362,95 +362,171 @@ from the low MR group to the high MR group
 
 - Senior citizens and students are more likely to be price-sensitive than the average consumer
 
-[Show mathematically on the board]{.small}
+## Third Degree Price Discrimination
+
+$$
+\begin{aligned}
+    P_1\left(1-\frac{1}{ |\epsilon_{Q_1,P_1}| }\right)&=MC(Q_1+Q_2) \\
+    P_2\left(1-\frac{1}{ |\epsilon_{Q_2,P_2}| }\right)&=MC(Q_1+Q_2)
+\end{aligned}
+$$
+
+if $P_1>P_2$, then we must have
+
+$$
+\begin{aligned}
+1-\frac{1}{ |\epsilon_{Q_1,P_1}| } &< 1-\frac{1}{ |\epsilon_{Q_2,P_2}| } \\
+\implies |\epsilon_{Q_2,P_2}| &> |\epsilon_{Q_1,P_1}|
+\end{aligned}
+$$
+
+
+[The market with the higher price must have the lower price elasticity of demand.]{.small}
+
+
+## Examples {.nonincremental}
+
+- Consumer surplus (Ex. 12.22)
+
+- Inverse elasticity pricing (LBD 12.5)
+
+- Capacity constraints (LBD 12.6)
+
 
 ## Screening
 
 Sorting consumers based on a consumer characteristic that 
 
-1. the firm can see (such as age or status) and 
+1. is observable by the firm (age,status) and 
 
-1. is strongly related to a consumer characteristic that the firm cannot see but would like to observe (such as willingness to pay or elasticity of demand)
+1. strongly related to a consumer unobserved characteristic that the firm would like to know (willingness to pay; elasticity of demand)
 
-- Screening Mechanisms: Intertemporal Price Discrimination, Coupons and Rebates
+- Screening Mechanisms: 
 
-## Third Degree Price Discrimination 
+    - Intertemporal Price Discrimination [(Telephone, highest during peak demand, daytime)]{.small}
+    - Coupons and Rebates [(People who collect coupons is likely to be more price-sensitive)]{.small}
 
-- MC = AC = 20
+## Implementing Price Discrimination
 
-- P~1~ = 100 - Q~1~
+- Problem: High-demand consumers might buy at a price targeting low-demand consumers [Ex.: Coupons easily available to everyone]{.small}
 
-- P~2~ = 80 - 2Q~2~
+- How can the firm ensure that 
+    - consumers who are targeted to pay the high price, pay the high price; and 
+    - consumers who are targeted to pay the low price, pay the low price?
 
-- MR~1~ = 100 - 2Q~1~ = MC = 20
+## Example
 
-- MR~2~ = 80 - 4Q~2~ = MC = 20
+:::: {.columns}
+::: {.column width="30%"}
+- Two market segments
+    - Beta: price-sensitive
+    - Alpha: less price-sensitive
+- Same quality [Quality: Product performance, amount of hassle]{.small}
+:::
+::: {.column width="70%"}
+![](figures/ch12-fence-a.png){fig-align="center" width="100%"}
+:::
+:::: 
 
-- Q~1~\* = 40
+## Example
 
-- Q~2~\* = 15
+:::: {.columns}
+::: {.column width="30%"}
+- Alpha consumers might buy at the low price
+    - if low-price version is readily available
+- Exploit: Less price-sensitive consumers are more quality-sensitive
+:::
+::: {.column width="70%"}
+![](figures/ch12-fence-b.png){fig-align="center" width="100%"}
+:::
+:::: 
 
-- P~1~\* = 60
 
-- P~2~\* = 50
+## Building a *Fence*
 
-## Examples
+- Keep the less price-sensitive consumers from being able and/or willing to purchase the low-price version of the good
 
-- Inverse elasticity pricing
+- Beta consumers are better off; they prefer C rather than B. They also prefer C to A
 
-- Capacity constraints
+- Alpha consumers prefer A to C. Thus, they will purchase the high-price high-quality version
+
+- By reducing the quality of the low-price offer, the firm makes the low-price version unattractive for alpha consumers
+    - Beta consumers are more tolerant of quality degradations, they choose the low-quality version
 
 ## Versioning
 
+- A strategy of selling two (or more) versions of the product with different quality levels at different prices
 
-## Tie-in Sales -- Requirements
+- **Damaged goods** strategy, a firm creates a low-end version of its full-priced good by deliberately damaging the product
 
-- A tie-in sale occurs if a customer can buy one product only if they
-agree to purchase another product as well
+    - Removing features or reducing performance
+    - Damaging the product might increase the marginal cost of producing the damaged good
+    - The cost differential is worth incurring if the gain in profits, resulting from implementing the price discrimination scheme, is greater
 
-- Requirements tie-in sales occur when a firm requires customers who buy one product from the firm to buy another product from the firm
+## Tying (Tie-in Sales)
 
-- A requirements tie-in sale may be used in place of price discrimination when the firm cannot observe the relative willingness to pay of different customers
+- A sales practice that allows a customer to buy one product (the tying product) only if that customer agrees to buy another product (the tied product)
 
-## Tie-in Sales -- Bundling
+- Often, tying is used when customers differ by the frequency with which they wish to use a product
 
-- Package tie-in sales (or bundling) occur when goods are combined so
-that customers cannot buy either good separately
+- Tying often enables a firm to extend its market power from the tying product to the tied product
 
-- Bundling may be used in place of price discrimination to increase
-producer surplus when consumers have different willingness to pay for
-the goods sold in the bundle
+
+## Bundling
+
+- A type of tie-in sale in which a firm requires customers who buy one of its products to simultaneously buy another of its products
+
+- Bundling can increase profits when 
+    - customers have different tastes (different willingnesses to pay) for the two products and when 
+    - the firm cannot price discriminate
 
 - But bundling does not always pay
 
 ## Bundling: Negatively Correlated Preferences
 
-- Without bundling: pc = \$1500 pm = \$600
 
-- Profit cm = \$800
+|   | Computer | Monitor |
+|:--:|:--------:|:-------:|
+|Consumer 1| \$1,200 | \$600 |
+|Consumer 2| \$1,500 | \$400 |
+|MC        | \$1,000 | \$300 |
+: Willingness to Pay
 
-- With bundling: pb = \$1800
+- Without bundling: Pc = \$1500 Pm = \$600 ; Profit cm = \$800
 
-- Profit b = \$1000
+- With bundling: Pb = \$1800; Profit b = \$1000
 
 ## Bundling: Positively Correlated Preferences
 
-- Without bundling: pc = \$1500  
-pm = \$600
+|   | Computer | Monitor |
+|:--:|:--------:|:-------:|
+|Consumer 1| \$1,200 | \$400 |
+|Consumer 2| \$1,500 | \$600 |
+|MC        | \$1,000 | \$300 |
+: Willingness to Pay
 
-- Profit cm = \$800
+- Without bundling: pc = \$1500  pm = \$600; Profit cm = \$800
 
-- With bundling: pb = \$2100
+- With bundling: pb = \$2100; Profit b = \$800
 
-- Profit b = \$800
+## Mixed Bundling
+
+|   | Computer | Monitor |
+|:--:|:--------:|:-------:|
+|Consumer 1| \$900 | \$800 |
+|Consumer 2| \$1,100 | \$600 |
+|Consumer 2| \$1,300 | \$400 |
+|Consumer 2| \$1,500 | \$200 |
+|MC        | \$1,000 | \$300 |
+: Willingness to Pay
+
+## Bundling
 
 - In general, bundling a pair of goods only pays if their demands are
 negatively correlated
 
 - Customers who are willing to pay relatively more for good A are not
 willing to pay as much for good B
-
-## Reservation Price
 
 - The reason is that the price is determined by the purchaser with the lowest reservation price
 
