@@ -132,7 +132,7 @@ Certain market features must be present for a firm to capture more surplus with 
 :::
 
 ::: {.column width="70%"}
-![](figures/ch12-1dpd-ex.png){#fig-1dpd fig-align="center" width="100%"}
+![](figures/ch12-1dpd-ex.png){fig-align="center" width="100%"}
 :::
 
 ::::
