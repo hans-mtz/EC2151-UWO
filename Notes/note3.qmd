@@ -118,6 +118,13 @@ Now the optimal decision of the firm depends on the profit tax $\tau$ and the fr
 
 If $\lambda=1$, then the optimal price and quantities do not change from the case where there is no profit tax. In other words, if the firm is allowed to deduct all of its costs from total revenue for tax purposes, then the same choice of quantity and price that maximizes its profits under no profit tax also maximizes its profits under such a tax.
 
+If $\lambda=0$, the marginal cost wedge becomes $\frac{1}{(1-\tau)}$. Since $\tau<1$, then $\frac{1}{(1-\tau)}>1$. This means that the optimal quantity will decrease and the optimal price will increase. In this case,
+$$
+\frac{dP}{d\tau}=\frac{c}{2b}\frac{1}{(1-\tau)^2} > 0
+$$
+
+In other words, when the firm cannot deduct any percentage from the profit tax, an increase of one percentage point in the profit tax will increase the output price by $\frac{dP}{d\tau}=\frac{c}{2b}\frac{1}{(1-\tau)^2}$.
+
 Another peculiar case is where $\lambda=\tau$. In this case, the marginal cost wedge becomes $(\lambda+1)>1$ (or $\tau+1$, since they are equal). So, the firm's marginal cost increases by $(\lambda+1)$. Thus, 
 
 $$
