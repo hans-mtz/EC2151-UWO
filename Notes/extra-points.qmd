@@ -1,0 +1,33 @@
+---
+title: "Bonus Credit Assignment"
+format:
+    pdf:
+        documentclass: article
+        colorlinks: true
+        # include-in-header: packages.tex
+        keep-tex: true
+        # resource-path: 
+        #     - "Simulations/Products"
+        # latex-output-dir: Output
+number-sections: true
+author: Hans Martinez
+date: today
+bibliography: biblio.bib
+---
+## Upstream and Downstream Monopolists {-}
+
+One interesting market structure is where a monopoly (*upstream monopolist*) produces output that is used as a factor of production by another monopolist (*downstream monopolist*). Suppose that the upstream monopolist produces output $M$ at a constant marginal cost $c$. The upstream monopolist sells the $M$-factor to the downstream monopolist at a price $k$. The downstream monopolist uses the $M$-factor to produce output $Q$ according to its production function $Q(M)=eM$. The output of the downstream monopolist is sold in a consumer market whose inverse demand curve is linear $P(Q)=a-bQ$. Assume that the downstream monopolist has no other cost of production other than the unit price $q$ that it must pay to the upstream monopolist.
+
+a. Set the maximization problem of the downstream monopolist in terms of the input, $M$. You can do this. Think about what's the total revenue of the downstream monopolist and what the total cost is for producing each unit of output.
+
+a. Solve the profit-maximization problem of the downstream monopolist and find the optimal input in terms of the parameters, $M(a,b,e,k)$. 
+
+a. The optimal input equation, $M(a,b,e,k)$, determines the factor demand function for the upstream monopolist. This function tells us the relationship between the factor price the upstream monopolist sets and the amount of the factor that the downstream monopolist will demand from the upstream monopolist. So, solve for the $k$, to get the inverse demand curve of the $M$-factor. 
+
+a. Calculate the marginal revenue associated with the $M$-factor inverse demand and set it equal to the marginal cost of the upstream monopolist. Solve for $M$. This is the optimal quantity that the upstream monopolist will produce of the $M$-factor.
+
+a. Because the upstream monopolist will only produce the optimal quantity, the downstream monopolist can only buy this amount of the $M$-factor. Find the output the downstream monopolist will produce and the price it will charge in the consumer market. You should have an equation of downstream monopolist output, $Q(a,b,e,c)$, and price, $P(a,e,c)$.
+
+a. Let's compare this output to the amount that would be produced by a single integrated monopolist. To do this, suppose the upstream and downstream firms merged into an *integrated* monopolist. The integrated monopolist would face the inverse demand function, $P(Q)=a-bQ$, and the production function of the downstream monopolist $Q=eM$, and the constant marginal cost of the upstream monopolist, $c$. Find the profit-maximizing output and price of the integrated monopolist.
+
+a. Finally, compare the outputs of the integrated with the non-integrated monopolist. What condition must be true in order for the price of the non-integrated market (downstream and upstream monopolists) to be greater than the price of the integrated monopolist?

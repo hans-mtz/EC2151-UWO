@@ -1,0 +1,118 @@
+---
+title: "Bonus Credit Assignment"
+subtitle: "Solution"
+format:
+    pdf:
+        documentclass: article
+        colorlinks: true
+        # include-in-header: packages.tex
+        keep-tex: true
+        # resource-path: 
+        #     - "Simulations/Products"
+        # latex-output-dir: Output
+number-sections: true
+author: Hans Martinez
+date: today
+bibliography: biblio.bib
+---
+## Upstream and Downstream Monopolists {-}
+
+One interesting market structure is where a monopoly (*upstream monopolist*) produces output that is used as a factor of production by another monopolist (*downstream monopolist*). Suppose that the upstream monopolist produces output $M$ at a constant marginal cost $c$. The upstream monopolist sells the $M$-factor to the downstream monopolist at a price $k$. The downstream monopolist uses the $M$-factor to produce output $Q$ according to its production function $Q(M)=eM$. The output of the downstream monopolist is sold in a consumer market whose inverse demand curve is linear $P(Q)=a-bQ$. Assume that the downstream monopolist has no other cost of production other than the unit price $q$ that it must pay to the upstream monopolist.
+
+a. Set the maximization problem of the downstream monopolist in terms of the input, $M$. You can do this. Think about what's the total revenue of the downstream monopolist and what the total cost is for producing each unit of output.
+
+$$
+\begin{aligned}     
+\max \pi &= P(Q(M))Q(M)-kM \\
+        & = (a-b(eM))eM-kM
+\end{aligned}
+$$
+
+b. Solve the profit-maximization problem of the downstream monopolist and find the optimal input in terms of the parameters, $M(a,b,e,k)$. 
+
+$$
+\begin{aligned}
+    (a-beM)e+eM(-be)-k&=0 \\
+    ae-be^2M-be^2M-k&=0 \\
+    M &=\frac{ae-k}{2be^2}
+\end{aligned}
+$$
+
+c. The optimal input equation, $M(a,b,e,k)$, determines the factor demand function for the upstream monopolist. This function tells us the relationship between the factor price the upstream monopolist sets and the amount of the factor that the downstream monopolist will demand from the upstream monopolist. So, solve for the $k$, to get the inverse demand curve of the $M$-factor.
+
+
+$$
+k=ae-2be^2M
+$$
+
+d. Calculate the marginal revenue associated with the $M$-factor inverse demand and set it equal to the marginal cost of the upstream monopolist. Solve for $M$. This is the optimal quantity that the upstream monopolist will produce of the $M$-factor.
+
+$$
+\begin{aligned}
+    ae-4be^2M &= c \\
+    M &= \frac{ae-c}{4be^2}
+\end{aligned}
+$$
+
+e. Because the upstream monopolist will only produce the optimal quantity, the downstream monopolist can only buy this amount of the $M$-factor. Find the output the downstream monopolist will produce and the price it will charge in the consumer market. You should have an equation of downstream monopolist output, $Q(a,b,e,c)$, and price, $P(a,e,c)$.
+
+$$
+\begin{aligned}
+    Q=eM=e\left(\frac{ae-c}{4be^2}\right)&=\frac{ae-c}{4be} \\
+    P=a-bQ=a-b\left(\frac{ae-c}{4be}\right)&=\frac{3ae+c}{4e}
+\end{aligned}
+$$
+
+f. Let's compare this output to the amount that would be produced by a single integrated monopolist. To do this, suppose the upstream and downstream firms merged into an *integrated* monopolist. The integrated monopolist would face the inverse demand function, $P(Q)=a-bQ$, and the production function of the downstream monopolist $Q=eM$, and the constant marginal cost of the upstream monopolist, $c$. Find the profit-maximizing output and price of the integrated monopolist.
+
+
+The profit-maximization problem for the integrated monopolist is
+$$
+\max_M \pi = (a-b(eM))(eM)-cM
+$$
+
+Then, the optimal input quantity demanded is
+$$
+\begin{aligned}
+    (a-beM)e+eM(-be)-c &=0\\
+    ae-2be^2M-c&=0\\
+    M=\frac{ae-c}{2be^2}
+\end{aligned}
+$$
+
+This level of input demand implies the following output and price
+
+$$
+\begin{aligned}
+    Q=eM=e\left(\frac{ae-c}{2be^2}\right)&=\frac{ae-c}{2be} \\
+    P=a-bQ=a-b\left(\frac{ae-c}{2be}\right)&=\frac{ae+c}{2e}
+\end{aligned}
+$$
+
+
+g. Finally, compare the outputs of the integrated with the non-integrated monopolist. What condition must be true in order for the price of the non-integrated market (downstream and upstream monopolists) to be greater than the price of the integrated monopolist?
+
+Let's call $Q^I$ the output of the integrated monopolist, and $Q^N$ the output where the upstream and downstream monopolists are not integrated.
+
+$$
+\begin{aligned}
+    \frac{Q^I}{Q^N} &= Q^I (Q^N)^{-1}\\
+                    &=\frac{ae-c}{2be}\left(\frac{ae-c}{4be}\right)^{-1} \\
+                    &= \frac{ae-c}{2be}\frac{4be}{ae-c} \\
+                    &= 2
+\end{aligned}
+$$
+
+The integrated monopolist produces twice the output of the upstream-downstream pair monopolists. This happens because of the double markup. The upstream monopolist raises its price above its marginal cost and then the downstream monopolist raises its price above this already marked-up cost.
+
+We expect that, everything else held constant, the output price of the non-integrated monopolists must be greater than the output price of the integrated one. In order for prices to make sense, the following condition must be true. 
+
+$$
+\begin{aligned}
+    P^N &> P^I \\
+    \frac{3ae+c}{4e}&>\frac{ae+c}{2e}\\
+    2e(3ae+c)&>4e(ae+c)\\
+    3ae+c &> 2ae+2c \\
+    ae &> c
+\end{aligned}
+$$

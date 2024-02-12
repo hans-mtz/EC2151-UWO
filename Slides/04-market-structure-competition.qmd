@@ -1,0 +1,254 @@
+---
+title: "Market Structure and Competition"
+subtitle: "Besanko and Braeutigam, CH 13"
+author: "Hans Martinez"
+institute: "Western University"
+date: ""
+date-format: long
+jupyter: python3
+format:
+  revealjs: 
+    slide-number: true
+    # chalkboard: 
+    #   buttons: false
+    preview-links: true
+    incremental: true
+    theme: [simple, theme.scss]
+    width: 1260
+    height: 700
+    embed-resources: true
+    navigation-mode: linear
+    # revealjs-plugins:
+    #   - fullscreen
+    # include-in-header: packages.tex
+    # css: [style.css, xaringan-themer.css]
+    # logo: images/quarto.png
+    # footer: <https://quarto.org>
+# resources:
+#   - Paper/WP-LCFI.pdf
+# bibliography: biblio/lcfi.bib
+---
+## Chapter 13 Overview
+
+- What happens when there is more than one seller, but still there are few enough to affect the market?
+- How do their choices affect each other?
+- Will they cooperate? Will they compete?
+- What happens if their products are imperfect substitutes?
+
+## Objectives
+
+- Describing and Measuring Market Structure
+- Oligopoly with Homogeneous Products
+- Dominant Firm Markets
+- Oligopoly with Horizontally Differentiated Products
+- Monopolistic Competition
+- The Cournot Equilibrium and the Inverse Elasticity Pricing Rule
+
+## Market Structures: 2 Key Dimensions {.smaller}
+
+| Market Structure          | Number of Firms | Type of Product         | Control Over Price     | Examples      |
+|---------------------------|-----------------|-------------------------|------------------------|---------------|
+| Perfect Competition       | Many            | Homogeneous             | None                   | Agriculture (US)  |
+| Monopolistic Competition  | Many            | Differentiated          | Some                   | Retail stores |
+| Oligopoly                  | Few             | Homogeneous or Differentiated | Some to Significant | Banking-Big 5 (CA)   |
+| Monopoly                  | One             | Unique                  | Significant            | Utilities     |
+| Dominant Firm             | One dominant, Many small | Homogeneous    | Significant by dominant firm | US: Scotch Tape (3M) |
+: Market Structures Characteristics
+
+## Measures of Market Structure
+
+- Four-Firm Concentration Ratio (4CR): The share of industry sales revenue accounted for by the four firms with the largest sales revenue in the industry
+
+- Herfindahl–Hirschman Index (HHI): The sum of the squares of the market share of each firm in the industry ($0 \le HHI \le 10,000$)
+
+- 
+  | Market Structure | 4CR | HHI |
+  |:-----------------|:---:|:----:|
+  | Perfect Competition | Low | Low |
+  | Olygopoly           | Intermediate | Intermediate |
+  | Monopoly            | 100     |   10,000 |
+
+
+## Oligopoly with Homogeneous Goods
+
+- A central feature of oligopoly markets: competitive interdependence
+    - The decisions of every firm significantly affect the profits of competitors
+    - Perfect Competition: No impact of one firm on its rivals
+    - Monopolist: No rivals
+
+- Central question of oligopoly theory: how does the close interdependence among firms in the market affect their behavior?
+
+## The Cournot Model
+
+- 2 firms (duopoly); one homogeneous good
+- Both with identical marginal costs
+- Firms choose output (how much to produce)
+    - simultaneously
+    - non-cooperatively (no collusion)
+    - no knowledge of each other's plan 
+
+## The Cournot Model
+
+- Inverse demand is downward-slopping and a function of the combined output of the two firms, $P(Q_1+Q_2)$
+    - Price is not known until both firms have made their output choice
+- Each firm will produce the output choice that maximizes its profit based on its **expectation** of the other firm's output choice
+
+## Residual Demand
+
+- Suppose firm 1 expects that firm 2 will produce $Q^e_2$
+- If firm 1 produces $Q_1$, then total output will be $Q=Q_1+Q_2^e$, and
+- and market price will be $P(Q)=P(Q_1+Q_2^e)$
+- the inverse market demand resulting from holding their rivals' output constant is the **residual demand** 
+    - Ex. Linear Demand 
+      $$
+      P(Q)=a-b(Q_1+Q_2^e)=(a-bQ_2^e)-bQ_1
+      $$
+
+## Residual Demand
+
+![](book-figures/c13/c13f001.png)
+
+
+```{python}
+#| label: fig-residual
+#| fig-cap: Residual demand
+#| eval: false
+#| include: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Market demand function P(Q)
+def market_demand(Q1,Q2):
+    return 100 - Q1-Q2
+
+# Total quantity produced by other firms
+Q_other = 30
+
+# Total market quantity
+Q = np.arange(0, 100, 1)
+P = market_demand(Q,0)
+
+# Residual demand for firm i (considering Q_other produced by other firms)
+Q_i = np.arange(0, 70, 1)
+P_i = market_demand(Q_i, Q_other)
+
+# Plotting
+plt.figure(figsize=(10, 6))
+plt.plot(Q, P, label='Market Demand')
+plt.plot(Q_i, P_i, label='Residual Demand for Firm i')
+plt.xlabel('Quantity')
+plt.ylabel('Price')
+plt.title('Market and Residual Demand')
+plt.legend()
+plt.axhline(y=20, xmin=50, xmax=80,color='red', linestyle='--', label='Quantity by Rival')
+plt.axhline(y=10, xmin=0, xmax=90,color='red', linestyle='--', label='Price')
+plt.axvline(x=60, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
+plt.axvline(x=90, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
+plt.grid(True)
+plt.show()
+```
+
+## Best Response
+
+- When choosing output, each firm will act as a monopolist relative to its *residual demand*
+
+- Firm 1 maximizes its profit by choosing $Q_1$ that maximizes:
+  $$
+  \pi_1=P(Q_1+Q_2^e)⋅Q_1−C(Q_1)
+  $$
+
+- **Best Response**: For any given belief about the output of firm 2, $Q^e_2$, there is an optimal choice of output for firm 1,
+  $$
+    Q_1=BR_1(Q^e_2)
+  $$
+
+## Reaction Function
+
+- The best response function for Firm 1, $BR_1(Q_2^e)$, is derived by setting:
+  $$
+  \frac{\partial \pi_1}{\partial Q_1} = 0
+  $$
+
+- **Example with Linear Demand**:
+  Assuming $P(Q) = a - b(Q_1 + Q_2)$ and constant marginal cost $MC = c$, the reaction functions can be simplified as:
+  $$
+  \begin{aligned}    
+    Q_1= \frac{a - c}{2b} - \frac{Q_2^e}{2} \;;\;
+    Q_2= \frac{a - c}{2b} - \frac{Q_1^e}{2}
+  \end{aligned}
+  $$
+
+
+## Rection Function
+
+![**Reaction Function**: Illustrates graphically a firm's best response output for each possible output of the other firm's output](book-figures/c13/c13f002.png){fig-align="center" width="80%"}
+
+
+## Cournot Equilibrium
+
+- Cournot Equilibrium: each firm maximizes its profits, given its beliefs about the other firm's output choice, and those beliefs are confirmed in equilibrium
+    - Each firm optimally produces the output its rival expects it to produce
+    - No firm has incentives to deviate 
+- Mathematically, a combination of output choices $(Q_1^*,Q_2^*)$ that satisfy
+  $$
+    \begin{aligned}
+        Q^*_1= \frac{a - c}{2b} - \frac{Q_2^*}{2} \;;\;
+        Q^*_2= \frac{a - c}{2b} - \frac{Q_1^*}{2}
+    \end{aligned}
+  $$
+
+## Cournot Equilibrium (Two-Firm Case)
+
+- **Cournot Equilibrium for Two Firms**: Occurs where the reaction curves of Firm 1 and Firm 2 intersect.
+
+- **Equilibrium Output**:
+  Solving the system of equations given by the reaction functions yields the equilibrium outputs for both firms:
+  $$
+  Q_1^* = Q_2^* = \frac{a - c}{3b}
+  $$
+  and the total market output is:
+  $$
+  Q^* = Q_1^* + Q_2^* = \frac{2(a - c)}{3b}
+  $$
+
+## Achieving Equilibrium
+
+![**In the Cournot equilibrium** both firms fully understand their interdependence and have confidence in each other's rationality](book-figures/c13/c13f003.png){fig-align="center" width="80%"}
+
+## Cournot vs Monopoly
+
+![By independently maximizing their own profits, firms produce more total output than they would if they collusively maximized industry profits (Monopoly).](book-figures/c13/c13f004.png){fig-align="center" width="80%"}
+
+## Cournot for N-firms
+
+- For $N$ identical firms, each firm $i$ will produce 
+  $$
+    Q^*_i = \frac{1}{N+1}\frac{a - c}{b}
+  $$
+
+- Total market output and market price will be
+  $$
+    Q^*=\sum_i Q^*_i = \frac{N}{N+1}\frac{(a - c)}{b}
+  $$
+  $$
+    P^*=a-b\left(\frac{N}{N+1}\frac{(a - c)}{b} \right) = \frac{a+Nc}{(N+1)}
+  $$
+
+## Comparing Market Structures
+
+| Market Structure | $N$ | Optimal Firm Output $Q^*_i$ | Total Market Output $Q^*$ | Market Price $P^*$ |
+|------------------|-------|------------------------------|-----------------------------|----------------------|
+| Monopoly         | 1     | $\frac{a - c}{2b}$         | $\frac{a - c}{2b}$        | $\frac{a + c}{2}$ |
+| Cournot Duopoly  | 2     | $\frac{a - c}{3b}$         | $\frac{2(a - c)}{3b}$     | $\frac{(a + 2c)}{3}$ |
+| Perfect Competition | $\infty$ | 0 (virtually)        | $\frac{a - c}{b}$         | $c$                  |
+
+## Comparing Market Structures
+
+- **Monopoly**: A single firm controls the entire market, producing half the competitive output and selling at a higher price.
+- **Cournot Duopoly**: Two firms share the market, leading to increased output and lower prices compared to monopoly.
+- **Perfect Competition**: An infinite number of firms produce at marginal cost, leading to the highest output and lowest price.
+
+
+## Cournot Eq. and Elasticity of Demand
+

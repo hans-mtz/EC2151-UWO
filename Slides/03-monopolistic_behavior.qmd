@@ -536,11 +536,12 @@ Sorting consumers based on a consumer characteristic that
 
 ## Effects of Advertising
 
-- The firm can capture surplus using nonprice strategies such as advertising
+- The firm can capture surplus using **nonprice strategies** such as advertising
 
 - By advertising, a seller hopes to increase the demand for its product, shifting the demand curve rightward and creating more surplus in the market
 
-- However, advertising is costly
+- However, advertising is costly. 
+    - Assume advertising increases fixed costs but not marginal cost of production
 
 ## Example
 
@@ -553,7 +554,7 @@ Sorting consumers based on a consumer characteristic that
 
 - When the firms spends $A_1$ dollars on advertising, its maximum profit is areas II + III
 
-## Conditons
+## Monopolist Problem
 
 Firms' profit-maximization problem on advertising spending
 
@@ -562,6 +563,8 @@ $$
 $$
 
 with $\frac{dQ}{dP}<0$ and $\frac{dQ}{dA}\ge0$
+
+## Conditions
 
 For a firm to maximize profit by advertising (expenditure on advertising A > 0) and producing a positive quantity (Q > 0), two conditions must hold:
 
@@ -576,6 +579,6 @@ $$
 \frac{A}{PQ}=-\frac{\epsilon_{Q,A}}{\epsilon_{Q,P}}
 $$
 
-The advertising expenditure share of revenues is equal to the ratio of the advertising elasticity of demand to the own price elasticity of demand
+- The advertising expenditure share of revenues is equal to the negative ratio of the advertising elasticity of demand to the own price elasticity of demand
 
-The advertising-to-sales ratio is higher in the market in which demand is highly sensitive to advertising, compared to the market with a low elasticity of demand for advertising
+- Comparing two markets with the same price elasticity of demand, the advertising-to-sales ratio is higher in the market in which demand is more sensitive to advertising

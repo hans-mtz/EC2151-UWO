@@ -14,137 +14,31 @@ author: Hans Martinez
 date: today
 bibliography: biblio.bib
 ---
-## A Discrete Choice Framework for Bundling[^taken]
+## Bundling: A Framework with Discrete Choices[^taken]
 
-[^taken]: Examples expanded from @Varian2014 p. 464.
+[^taken]: Adapted from @Armstrong2016 p. 596-598.
 
-Consider a firm with constant marginal costs, $MC=c$, that faces a linear demand, $P=a-bQ$. What happens to the price charged when a quantity tax $t$ is imposed? 
+Consider a situation in which a monopolist supplies two products, labeled 1 and 2, and a consumer buys either zero or one unit of each product (and maybe a unit of each). A consumer’s preferences are described by the taste parameters $(v_1 , v_2 , v_b )$. She is willing to pay $v_i$ for product $i = 1, 2$ on its own and to pay $v_b$ for the bundle of both products. Assume the consumer’s valuations are additive $v_b = v_1 + v_2$.[^valuations] $p_1$ is the price for product 1 on its own, $p_2$ is the price for product 2 on its own, and $p_b$ is the price for the bundle of both products.
 
-The marginal cost goes up by the amount of the tax, $MC=c+t$. The intersection of marginal revenue, $MR=a-2bQ$, and marginal cost moves to the left.
+[^valuations]: Two products may also be partial substitutes if $v_b < v_1 + v_2$ or partial complements if $v_b >v_1+v_2$. The great majority of articles written on bundling as a form of price discrimination assume valuations are additive, as much for tractability as for realism.
 
-Algebraically, the optimality condition becomes now
-$$
-a-2bQ=c+t
-$$
+A consumer chooses the option that leaves her with the highest net surplus. For example, with no bundling, she will buy product $i = 1,2$ whenever $v_i−p_i \ge 0$. In the case of bundling, the consumer will buy the bundle if $v_b-p_b\ge0$.
 
-Solving for Q,
+Lastly, in the case of mixed bundling, the consumer will buy both items whenever $v_b-p_b\ge \max{\{v_1−p_1,v_2−p_2,0\}}$, she will buy product $i = 1,2$ on its own whenever $v_i−p_i \ge \max\{v_b − p_b, v_j − p_j, 0\}$, and otherwise she will buy neither product.
 
-$$
-Q=\frac{a-c-t}{2b}
-$$ {#eq-opt-q}
+As a function of the price schedule $(p_1,p_2,p_b)$, denote by $Q_i$ the number of consumers who buy only product $i=1,2$, and $Q_b$ the number of consumers who buy the bundle. 
 
-Thus, the change in output due to a change in the quantity tax is
+If the marginal cost of supplying product $i=1,2$ is $c_i$, the seller's profit-maximizing problem is
 
 $$
-\frac{dQ}{dt}=-\frac{1}{2b}
+\max_{\{p_1,p_2,p_b\}} \pi=(p_1-c_1)Q_1 + (p_2-c_2)Q_2 + (p_b-c_1-c_2)Q_b
 $$
 
-Plugging @eq-opt-q into the demand curve
+When valuations are additive, the revenue from selling two products using bundling (nonlinear) pricing is greater than the sum of selling the two products separately with linear prices. Negative correlation in additive valuations makes it more likely that bundling is profitable. Negative correlation puts less weight on the *northeast* part of the graph.
 
-$$
-P=\frac{a+c+t}{2}
-$$ {#eq-opt-p}
+### Examples
 
-Taking the derivative of @eq-opt-p with respect $t$, we get
 
-$$
-\frac{dP}{dt}=\frac{1}{2}
-$$
-
-Since the demand curve is half as steep as the marginal revenue curve, the price goes up by half the amount of the tax. This happens because of the assumptions of the linear demand curve and constant marginal costs. These assumptions imply that the price will increase by *less than the tax increase*. Is this likely to be true in general?
-
-Consider now the case of a monopolist facing a constant-elasticity demand curve, $P=aQ^{-b}$. The price elasticity of demand is
-
-$$
-\begin{aligned}
-\epsilon_{Q,P}&=\frac{dQ}{dP}\frac{P}{q}\\
-    &=-baP^{-b-1}\frac{P}{aQ^{-b}}\\
-    &=-b
-\end{aligned}
-$$
-
-Then, the marginal revenue in terms of the price elasticity of demand now becomes 
-
-$$
-\begin{aligned}
-MR&=P\left(1-\frac{1}{ |\epsilon_{Q,P}| }\right)\\
-    &=P\left(1-\frac{1}{ |b| }\right)
-\end{aligned}
-$$ 
-
-Next, using the optimality condition and solving for price,
-
-$$
-\begin{aligned}
-P\left(1-\frac{1}{ |\epsilon_{Q,P}| }\right)&=c+t\\
-    P&=\frac{c+t}{\left(1-\frac{1}{ |b| }\right)}
-\end{aligned}
-$$ 
-
-so that,
-$$
-\frac{dP}{dt}=\frac{1}{\left(1-\frac{1}{ |b| }\right)}
-$$ {#eq-dpdt-e}
-
-Because the monopolist will never operate in the inelastic part of the demand, $|b| >1$, then $\frac{dP}{dt}> 1$. @eq-dpdt-e says that, in this case, the monopolist will increase the price *more than the amount of the tax*.
-
-Another kind of tax we can consider is the profit tax. In this case, the monopolist is required to pay a fraction $\tau$ of its profits, to the government. In addition, the monopolist is only allowed to deduct a fraction $\lambda\le1$ of its total costs from total revenues. 
-
-The maximization problem that the monopolist faces is then
-
-$$
-\max_{Q} (1-\tau)[TR(Q)-\lambda TC(Q)] - (1-\lambda) TC(Q)
-$$ {#eq-profit-tax}
-
-Taking the derivative with respect to $Q$, the optimality condition becomes
-
-$$
-\frac{dTR}{dQ} = \frac{dTC}{dQ}\left(\lambda + \frac{1-\lambda}{1-\tau}\right)
-$$ {#eq-foc-profit-tax}
-
-@eq-foc-profit-tax looks familiar. Our well-known optimality condition now contains a *wedge*, $\left(\lambda + \frac{1-\lambda}{1-\tau}\right)$, multiplying the marginal cost.
-
-Suppose the demand is linear, $P=a-bQ$, and the marginal costs are constant, $\frac{dTC}{dQ}=c$, then the optimal quantity and price become
-
-$$
-Q^*=\frac{a-c\left(\lambda + \frac{1-\lambda}{1-\tau}\right)}{2b}
-$$
-
-$$
-P^*=\frac{a+c\left(\lambda + \frac{1-\lambda}{1-\tau}\right)}{2b}
-$$
-
-Now the optimal decision of the firm depends on the profit tax $\tau$ and the fraction of the costs the firm is allowed to deduct $\lambda$.
-
-If $\lambda=1$, then the optimal price and quantities do not change from the case where there is no profit tax. In other words, if the firm is allowed to deduct all of its costs from total revenue for tax purposes, then the same choice of quantity and price that maximizes its profits under no profit tax also maximizes its profits under such a tax.
-
-If $\lambda=0$, the marginal cost wedge becomes $\frac{1}{(1-\tau)}$. Since $\tau<1$, then $\frac{1}{(1-\tau)}>1$. This means that the optimal quantity will decrease and the optimal price will increase. In this case,
-$$
-\frac{dP}{d\tau}=\frac{c}{2b}\frac{1}{(1-\tau)^2} > 0
-$$
-
-In other words, when the firm cannot deduct any percentage from the profit tax, an increase of one percentage point in the profit tax will increase the output price by $\frac{dP}{d\tau}=\frac{c}{2b}\frac{1}{(1-\tau)^2}$.
-
-Another peculiar case is where $\lambda=\tau$. In this case, the marginal cost wedge becomes $(\lambda+1)>1$ (or $\tau+1$, since they are equal). So, the firm's marginal cost increases by $(\lambda+1)$. Thus, 
-
-$$
-\frac{dP}{d\tau}=\frac{dP}{d\lambda}=\frac{c}{2}>0
-$$
-
-For a one percentage point increase of the profit tax (or the fraction of the deductible cost), the monopolist will increase the price by half the marginal cost.
-
-If $\lambda\not=\tau$, the marginal cost increases by $\left(\lambda + \frac{1-\lambda}{1-\tau}\right)>1$.
-
-So we have,
-
-$$
-\begin{aligned}
-\frac{dP}{d\lambda} &= -\frac{c\tau}{2(1-\tau)} < 0\\
-\frac{dP}{d\tau} &= \frac{c(1-\lambda)}{2(1-\tau)^2} > 0
-\end{aligned}
-$$ {#eq-dpdt-profit}
-
-These equations indicate that, holding the profit tax constant, the price will decrease as the firm is allowed to deduct a greater fraction of its total costs. Likewise, holding the deductible fraction of total costs constant, a greater profit tax will increase the price.
 
 ## References {-}
 
