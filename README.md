@@ -12,3 +12,5 @@ Week 2-3
 
 Week 3-4
 - [Capturing Surplus](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/03-monopolistic_behavior.html)
+
+- [Market Structure and Competition](https://raw.githack.com/hans-mtz/EC2151-UWO/main/Slides/04-market-structure-competition.html)
