@@ -1,0 +1,45 @@
+\documentclass[tikz,border=10pt]{standalone}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines=left,
+    xlabel={$Q$},
+    ylabel={$P$},
+    ymin=0, ymax=13,
+    xmin=0, xmax=13,
+    xtick=\empty, 
+    ytick=\empty,
+    clip=false,
+    xlabel style={at={(ticklabel* cs:1)},anchor=west},
+    ylabel style={at={(ticklabel* cs:1)},anchor=south east, rotate=-90},
+    every axis plot/.append style={thick},
+]
+
+% Demand Line
+\addplot[domain=8:12, color=blue] {12-x} node[pos=.95, anchor=south west] {$D_1$};
+\addplot[color=blue] coordinates {(0,12) (0,4)};
+\addplot[color=blue, dashed] coordinates {(0,4) (8,4)};
+\addplot[domain=0:8, color=gray, dashed] {12-x} node[pos=.5, anchor=south west] {$D$};
+
+% Marginal Cost Line
+\addplot[domain=0:12, color=red] {2} node[pos=1.1] {$MC$};
+
+% Marginal Revenue Line
+% \addplot[domain=0:5, color=orange] {10-2*x} node[pos=0.7, anchor=south west] {$MR$};
+\addplot[dotted] coordinates {(4,0) (4,4)};
+\addplot[dotted] coordinates {(8,0) (8,4)};
+
+% Labels
+\node[label={180:{\( a \)}},circle,fill,inner sep=2pt] at (axis cs:0,12) {};
+% \node[label={180:{\( P_a \)}},circle,fill,inner sep=2pt] at (axis cs:5,6) {};
+\node[label={180:{\( P_2 \)}},circle,fill=blue,inner sep=2pt] at (axis cs:0,4) {};
+\node[label={270:{\( \frac{1}{2}Q(P_2)\)}},circle,fill,inner sep=2pt] at (axis cs:4,0) {};
+\node[label={270:{\( \frac{a}{b} \)}},circle,fill,inner sep=2pt] at (axis cs:12,0) {};
+\node[label={270:{\( Q(P_2)\)}},circle,fill,inner sep=2pt] at (axis cs:8,0) {};
+
+\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -2,6 +2,7 @@
 # QPAPFILE = Tax-Prod
 QSLIFOLD = Slides
 QPDFFOLD = Notes
+TIKZFOLD = Slides/figures
 # RDIR = ./Code/Colombia
 # QPAPDIR = ./Paper
 # QSLIDIR = ./Quarto-Slides
@@ -9,6 +10,7 @@ QPDFFOLD = Notes
 # list all R files
 QSLIFILES := $(wildcard $(QSLIFOLD)/*.qmd)
 QPDFFILES := $(wildcard $(QPDFFOLD)/*.qmd)
+TIKZFILES := $(wildcard $(TIKZFOLD)/*.tex)
 # RFILES := $(wildcard $(RDIR)/*.R)
 # EXCLUDE := $(wildcard $(RDIR)/_*.R)
 # QFILES := $(wildcard $(QPAPDIR)/*.qmd)
@@ -27,6 +29,8 @@ QPDFFILES := $(wildcard $(QPDFFOLD)/*.qmd)
 # RDEPOUT := $(RIND:.R=.Rout)
 Q_SLI_OUT_FILES := $(QSLIFILES:.qmd=.html)
 Q_PDF_OUT_FILES := $(QPDFFILES:.qmd=.pdf)
+PDF_FIGS := $(TIKZFILES: .tex=.pdf)
+PNG_FROM_PDF_FIGS := $(TIKZFILES: .tex=.png)
 # Targets
 ## Default target
 main: $(RDIR)/main.Rout #$(filter-out $(RDIR)/main.Rout, $(OUT_FILES))
@@ -49,7 +53,7 @@ html:
 	quarto render $(QPAPDIR)/$(QPAPFILE).qmd --to html
 #
 # Make slides
-slides: $(Q_SLI_OUT_FILES)
+slides: $(Q_SLI_OUT_FILES) $(PNG_FROM_PDF_FIGS)
 #	quarto render $(QSLIDIR)/$(QSLIFILE).qmd
 #	open -a Safari $(QSLIDIR)/$(QSLIFILE).html
 # Make pdfs
@@ -58,6 +62,12 @@ pdfs: $(Q_PDF_OUT_FILES)
 # Rules
 # $(RDIR)/%.Rout: $(RDIR)/%.R 
 # 	R CMD BATCH --no-save --no-restore-data $< $@
+
+$(TIKZFOLD)/%.pdf: $(TIKZFOLD)/%.tex
+	pdflatex $<
+
+$(TIKZFOLD)/%.png: $(TIKZFOLD)/%.pdf
+	convert -density 600 $< $@
 
 # # # Compile main tex file and show errors
 # $(QPAPDIR)/$(QPAPFILE).pdf: $(QPAPDIR)/$(QPAPFILE).qmd #$(QFILES) #$(OUT_FILES) #$(CROP_FILES)
@@ -76,6 +86,11 @@ $(QPDFFOLD)/%.pdf: $(QPDFFOLD)/%.qmd
 # May need to add something here if some R files depend on others.
 $(RDIR)/main.Rout: $(RFILES)
 
+# $(QSLIFOLD)/04-market-structure-competition.html: $(PNG_FROM_PDF_FIGS) $(PDF_FIGS)
+
+# $(Q_SLI_OUT_FILES): $(TIKZFOLD)/$(PNG_FROM_PDF_FIGS)
+
+# $(PNG_FROM_PDF_FIGS): $(PDF_FIGS)
 # $(RDIR)/30_beta_diff.Rout $(RDIR)/40_beta_diff_yoy.Rout $(RDIR)/45_beta_diff.Rout :$(RDIR)/20_functions.R $(RDIR)/15_global_vars.R $(RDIR)/00_reading_data.R
 
 # $(RDIR)/60_plot_discontinuity.Rout $(RDIR)/50_beta_diff.Rout $(RDIR)/30_beta_diff.Rout:$(RDIR)/20_functions.R $(RDIR)/15_global_vars.R $(RDIR)/00_reading_data.R

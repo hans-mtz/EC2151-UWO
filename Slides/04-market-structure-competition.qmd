@@ -5,7 +5,7 @@ author: "Hans Martinez"
 institute: "Western University"
 date: ""
 date-format: long
-jupyter: python3
+jupyter: myenv
 format:
   revealjs: 
     slide-number: true
@@ -106,6 +106,19 @@ format:
 
 ## Residual Demand
 
+![](figures/residual-demand.png){fig-align="center"}
+
+## Example
+
+- Inverse demand curve $P(Q)=100-Q$
+- $MC=10$
+- Firm 1 is Samsung and Firm 2 is SK
+- If $Q=80$, then $P(80)=20$
+- If $Q^e_2=50$, then $P(Q_1+50)=(100-50)-Q_1$
+  - for $Q_1=30$, $P(30+50)=20$
+
+## Residual Demand
+
 ![](book-figures/c13/c13f001.png)
 
 
@@ -141,10 +154,11 @@ plt.xlabel('Quantity')
 plt.ylabel('Price')
 plt.title('Market and Residual Demand')
 plt.legend()
-plt.axhline(y=20, xmin=50, xmax=80,color='red', linestyle='--', label='Quantity by Rival')
-plt.axhline(y=10, xmin=0, xmax=90,color='red', linestyle='--', label='Price')
-plt.axvline(x=60, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
-plt.axvline(x=90, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
+plt.hlines(y=[0,10], xmin=[70,0], xmax=[100,90],color=['purple','red'], linestyle='--', label=['Quantity by Rival','MC'])
+# plt.annotate()
+# plt.axhline(y=10, xmin=0, xmax=90,color='purple', linestyle='--', label='MC')
+# plt.axvline(x=60, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
+# plt.axvline(x=90, ymin=0, ymax=10,color='red', linestyle='--', label='Price')
 plt.grid(True)
 plt.show()
 ```
@@ -179,10 +193,31 @@ plt.show()
   \end{aligned}
   $$
 
+## Reaction Function
+
+![](figures/reaction-curves.png){fig-align="center"}
+
+## Example [(continued)]{.small}
+
+- With $P(Q)=100-Q$ and $MC=10$
+- 
+  $$
+    Q_1=45-\frac{Q^e_2}{2} \;;\;Q_2=45-\frac{Q^e_1}{2}
+  $$
 
 ## Rection Function
 
+:::: {.columns}
+::: {.column width="30%"}
+- $Q_1(Q^e_2)=45-\frac{Q^e_2}{2}$
+- $Q_1(50)=20$
+- $Q_1(30)=30$
+- $Q_1(20)=35$
+:::
+::: {.column width="70%"}
 ![**Reaction Function**: Illustrates graphically a firm's best response output for each possible output of the other firm's output](book-figures/c13/c13f002.png){fig-align="center" width="80%"}
+:::
+::::
 
 
 ## Cournot Equilibrium
@@ -198,7 +233,7 @@ plt.show()
     \end{aligned}
   $$
 
-## Cournot Equilibrium (Two-Firm Case)
+## Cournot Equilibrium
 
 - **Cournot Equilibrium for Two Firms**: Occurs where the reaction curves of Firm 1 and Firm 2 intersect.
 
@@ -212,20 +247,34 @@ plt.show()
   Q^* = Q_1^* + Q_2^* = \frac{2(a - c)}{3b}
   $$
 
+## Example [(continued)]{.small}
+
+- Continuing with our example $P=100-Q$ and $MC=10$
+
+- Firm output is $Q_i=30$, total market output is $Q=60$
+
+- So, market price is $P=40$
+
 ## Achieving Equilibrium
 
 ![**In the Cournot equilibrium** both firms fully understand their interdependence and have confidence in each other's rationality](book-figures/c13/c13f003.png){fig-align="center" width="80%"}
 
-## Cournot vs Monopoly
-
-![By independently maximizing their own profits, firms produce more total output than they would if they collusively maximized industry profits (Monopoly).](book-figures/c13/c13f004.png){fig-align="center" width="80%"}
 
 ## Cournot for N-firms
 
-- For $N$ identical firms, each firm $i$ will produce 
+- For $N$ identical firms, total output is $Q=\sum_i^N Q_i$
+
+- Firm $i$ solves
+  $$
+    \max_{Q_i} P(Q)⋅Q_i-C(Q_i)
+  $$ {#eq-n-cournot}
+
+- For linear demand, and $MC=c$, each firm $i$ will produce 
   $$
     Q^*_i = \frac{1}{N+1}\frac{a - c}{b}
   $$
+
+## Cournot for N-firms
 
 - Total market output and market price will be
   $$
@@ -249,6 +298,108 @@ plt.show()
 - **Cournot Duopoly**: Two firms share the market, leading to increased output and lower prices compared to monopoly.
 - **Perfect Competition**: An infinite number of firms produce at marginal cost, leading to the highest output and lowest price.
 
+## Comparing Market Structures
 
-## Cournot Eq. and Elasticity of Demand
+![](figures/reaction-curves-all.png){fig-align="center"}
+
+## Cournot vs Monopoly
+
+![By independently maximizing their own profits, firms produce more total output than they would if they collusively maximized industry profits (Monopoly).](book-figures/c13/c13f004.png){fig-align="center" width="80%"}
+
+## Cournot and Elasticity of Demand
+
+- FOC of @eq-n-cournot gives
+  $$
+    P(Q)+\frac{\partial P}{\partial Q}⋅Q_i=MC(Q_i)
+  $$
+
+- It can be shown that
+  $$
+    P(Q)\left[1-\frac{1}{|\epsilon_{Q,P}|/s_i}\right]=MC(Q_i)
+  $$
+  where $s_i=Q_i/Q$ is the market share
+
+## Cournot and Elasticity of Demand
+
+- $|\epsilon_{Q,P}|/s_i$, the elasticity of the demand curve facing the firm:
+  - the smaller the market share of the firm, the more elastic the demand curve it faces
+
+-
+  | $s_i$ | Demand Curve | Condition | Market Structure|
+  |-------|--------------|-----------|-----------------|
+  | 0     | Flat         | $P=MC$      | Perfect Competition|
+  | 1     | Market Demand| $P(1-\frac{1}{|\epsilon_{Q,P}|})=MC$ | Monopoly|
+
+# Bertrand Competition
+
+## Simultaneous Price Setting
+
+- **Price Competition**: Unlike Cournot, where firms compete by choosing quantities, in the Bertrand model, firms compete by setting prices and letting the market determine the quantity sold. Simultaneous, non-cooperative.
+- **Homogeneous Products**: Firms produce identical products, making price the sole factor for consumers when choosing between firms
+- **Cost Structures**: Firms have identical cost structures and sufficient capacity to meet all demand
+- **Rational Expectations**: Firms are profit-maximizers and have rational expectations about their competitors' behavior
+
+## Bertrand Model
+
+- **Profit Maximization for Firm 1**:
+  $$
+  \pi_1 = P_1 \cdot Q_1(P_1, P_2) -C(Q_1(P_1,P_2))
+  $$
+  - where $P_1$ is the price set by Firm 1, 
+  - $C(Q_1(P_1,P_2))$ is cost function for Firm 1, and 
+  - $Q_1(P_1, P_2)$ is the demand for Firm 1's product as a function of both firms' prices
+
+## Demand Scenarios for Firm 1
+
+1. **When $P_1 = P_2$**:
+    - If both firms set equal prices, we assume demand is split equally between them. Hence, $Q_1 =Q_2 = \frac{1}{2}Q(P_2)$, where $Q(P_2)$ is the total market demand at price $P_2$
+2. **When $P_1 > P_2$**:
+    - Firm 1 captures none of the market demand since consumers prefer the cheaper, identical product from Firm 2. Thus, $Q_1 = 0$
+3. **When $P_1 < P_2$**:
+    - Firm 1 captures the entire market demand because its price is lower. Hence, $Q_1 = Q(P_1)$
+
+## Residual Demand Bertrand
+$$
+Q_1 = 
+\begin{cases} 
+  0                 ,& P_1>P_2 \\
+  \frac{1}{2}Q(P_2) ,& P_1=P_2 \\
+  Q(P_1)            ,& P_1 < P_2
+\end{cases}
+$$
+
+## Residual Demand Bertrand
+
+![](figures/bertrand-demand.png){fig-align="center"}
+
+## Example [(continued)]{.small}
+
+![](book-figures/c13/c13f005.png){fig-align="center"}
+
+## Bertrand Equilibrium
+
+- **Definition**: The Bertrand equilibrium is reached when each firm sets its price such that it maximizes its profits and neither firm can increase profits by unilaterally changing its price.
+
+- **Reaching the Bertrand Equilibrium**:
+  - With identical products and rational, profit-maximizing firms, the equilibrium occurs when both firms set their prices equal to marginal cost ($P = MC$).
+  - If one firm undercuts the other by even a small amount, it captures the entire market. Thus, to avoid losing the market, firms race to the bottom, stopping at $P = MC$.
+
+## Bertrand Equilibrium
+
+- **Characteristics**:
+  - The Bertrand equilibrium results in the competitive price level, even with only two firms in the market.
+  - Total market supply meets all demand at this price level, as firms have sufficient capacity.
+
+## Bertrand vs. Other Market Structures {.smaller}
+
+- **Bertrand vs. Cournot**:
+  - In Cournot competition, firms choose quantities, leading to higher prices than marginal costs due to the strategic reduction in total output.
+  - In Bertrand competition, firms choose prices, leading to a price equal to marginal cost, similar to perfect competition outcomes, even with only two firms.
+
+- **Bertrand and Perfect Competition**:
+  - Both result in prices equal to marginal costs; however, perfect competition assumes an infinite number of firms, while Bertrand demonstrates that two firms are sufficient to reach competitive pricing under price competition.
+
+## Implications for Market Outcomes
+- **Cournot Model**: Higher prices and lower quantities than in perfect competition, with profits for each firm.
+- **Bertrand Model**: Identical to perfect competition in terms of price and quantity, with no profits for each firm.
 

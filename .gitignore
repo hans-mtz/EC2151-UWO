@@ -3,3 +3,7 @@
 Test/*
 *.fdb_latexmk
 *.zip
+*.log
+*.aux
+*.fls
+*.synctex.gz
