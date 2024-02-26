@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+    % Axes
+    \draw[->] (0,0) -- (5,0) node[right] {$Q_1$};
+    \draw[->] (0,0) -- (0,5) node[above] {$Q_2$};
+    % Isoprofit curves
+    \draw[thick, red] (0.5,4.5) to[out=-80,in=180] (4.5,0.5) node[right] {Higher Profit};
+    \draw[thick, blue] (1,4) to[out=-80,in=180] (4,1) node[right] {Lower Profit};
+    % Labels
+    \draw (3,3) node[black] {Isoprofit Curves};
+\end{tikzpicture}
+\end{document}

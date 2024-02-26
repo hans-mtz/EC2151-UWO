@@ -53,11 +53,11 @@ html:
 	quarto render $(QPAPDIR)/$(QPAPFILE).qmd --to html
 #
 # Make slides
-slides: $(Q_SLI_OUT_FILES) $(PNG_FROM_PDF_FIGS)
+slides: $(Q_SLI_OUT_FILES) $(PNG_FROM_PDF_FIGS) $(PDF_FIGS)
 #	quarto render $(QSLIDIR)/$(QSLIFILE).qmd
 #	open -a Safari $(QSLIDIR)/$(QSLIFILE).html
 # Make pdfs
-pdfs: $(Q_PDF_OUT_FILES)
+pdfs: $(Q_PDF_OUT_FILES) 
 
 # Rules
 # $(RDIR)/%.Rout: $(RDIR)/%.R 
@@ -73,7 +73,7 @@ $(TIKZFOLD)/%.png: $(TIKZFOLD)/%.pdf
 # $(QPAPDIR)/$(QPAPFILE).pdf: $(QPAPDIR)/$(QPAPFILE).qmd #$(QFILES) #$(OUT_FILES) #$(CROP_FILES)
 # 	quarto preview $<
 
-$(QSLIFOLD)/%.html: $(QSLIFOLD)/%.qmd
+$(QSLIFOLD)/%.html: $(QSLIFOLD)/%.qmd 
 	quarto render $<
 
 $(QPDFFOLD)/%.pdf: $(QPDFFOLD)/%.qmd

@@ -334,7 +334,7 @@ plt.show()
 
 ## Simultaneous Price Setting
 
-- **Price Competition**: Unlike Cournot, where firms compete by choosing quantities, in the Bertrand model, firms compete by setting prices and letting the market determine the quantity sold. Simultaneous, non-cooperative.
+- **Price Competition**: Unlike Cournot, where firms compete by choosing quantities, in the Bertrand model, firms compete by setting prices and letting the market determine the quantity sold. Simultaneous, non-cooperative decisions.
 - **Homogeneous Products**: Firms produce identical products, making price the sole factor for consumers when choosing between firms
 - **Cost Structures**: Firms have identical cost structures and sufficient capacity to meet all demand
 - **Rational Expectations**: Firms are profit-maximizers and have rational expectations about their competitors' behavior
@@ -352,19 +352,21 @@ plt.show()
 ## Demand Scenarios for Firm 1
 
 1. **When $P_1 = P_2$**:
-    - If both firms set equal prices, we assume demand is split equally between them. Hence, $Q_1 =Q_2 = \frac{1}{2}Q(P_2)$, where $Q(P_2)$ is the total market demand at price $P_2$
+    - If both firms set equal prices, we assume demand is split equally between them. Hence, $Q_1 =Q_2 = \frac{1}{2}Q(P_1)$, where $Q(P_1)$ is the total market demand at price $P_1$
 2. **When $P_1 > P_2$**:
     - Firm 1 captures none of the market demand since consumers prefer the cheaper, identical product from Firm 2. Thus, $Q_1 = 0$
 3. **When $P_1 < P_2$**:
     - Firm 1 captures the entire market demand because its price is lower. Hence, $Q_1 = Q(P_1)$
 
 ## Residual Demand Bertrand
+
+We can summarize the previous analysis as
 $$
-Q_1 = 
+Q_1(P_1,P_2) = 
 \begin{cases} 
-  0                 ,& P_1>P_2 \\
-  \frac{1}{2}Q(P_2) ,& P_1=P_2 \\
-  Q(P_1)            ,& P_1 < P_2
+  0                ,& P_1>P_2 \\
+  \frac{1}{2}Q(P_1),& P_1=P_2 \\
+  Q(P_1)           ,& P_1 < P_2
 \end{cases}
 $$
 
@@ -390,16 +392,209 @@ $$
   - The Bertrand equilibrium results in the competitive price level, even with only two firms in the market.
   - Total market supply meets all demand at this price level, as firms have sufficient capacity.
 
-## Bertrand vs. Other Market Structures {.smaller}
+## Bertrand vs. Cournot
 
-- **Bertrand vs. Cournot**:
-  - In Cournot competition, firms choose quantities, leading to higher prices than marginal costs due to the strategic reduction in total output.
-  - In Bertrand competition, firms choose prices, leading to a price equal to marginal cost, similar to perfect competition outcomes, even with only two firms.
+- In **Cournot** competition, firms choose **quantities**, 
+  - leading to higher prices than marginal costs, $P>MC$, due to the strategic reduction in total output.
+- In **Bertrand** competition, firms choose **prices**, 
+  - leading to a price equal to marginal cost, $P=MC$, similar to perfect competition outcomes, even with only two firms.
 
-- **Bertrand and Perfect Competition**:
-  - Both result in prices equal to marginal costs; however, perfect competition assumes an infinite number of firms, while Bertrand demonstrates that two firms are sufficient to reach competitive pricing under price competition.
+## Bertrand and Perfect Competition
 
-## Implications for Market Outcomes
-- **Cournot Model**: Higher prices and lower quantities than in perfect competition, with profits for each firm.
-- **Bertrand Model**: Identical to perfect competition in terms of price and quantity, with no profits for each firm.
+- Both result in prices equal to marginal costs, $P=MC$; 
+- however, perfect competition assumes an infinite number of firms, $N=\infty$, 
+- while Bertrand demonstrates that two firms $N\ge2$, are sufficient to reach competitive pricing under price competition.
 
+
+# Stackelberg Model
+
+## Quantity Leadership
+- **Sequential Moves**: Unlike Cournot and Bertrand models, the Stackelberg model assumes that firms move sequentially. One firm, designated as the leader, chooses its output first; the follower firm then reacts to this decision.
+- **Homogeneous Products**: Firms produce identical products.
+- **Known Reaction Function**: The leader firm is aware of the follower firm's reaction function and uses this information to optimize its own output decision.
+- **Complete Information**: Both firms have complete information about the market, including costs and demand.
+
+## The Follower's Problem
+
+- **General Framework**:
+  The follower firm chooses its output $Q_2$ to maximize its profit, given the output $Q_1$ of the leader firm. The follower's profit function is:
+  $$
+  \pi_2(Q_2) = P(Q_1 + Q_2)Q_2 - C_2(Q_2)
+  $$
+  where $P(Q)$ is the market price function and $C_2(Q_2)$ represents the cost of producing $Q_2$.
+
+## Deriving the Reaction Function
+
+- The profit-maximization choice of the follower firm will depend on the leader's choice $Q_1$
+- The reaction function $Q_2 = BR_2(Q_1)$ shows this relationship 
+- $BR_2(Q_1)$ derived by solving:
+  $$
+  \frac{d\pi_2}{dQ_2} = 0
+  $$
+  This equation gives the best response of the follower to any given $Q_1$ by the leader.
+
+
+## Follower's Reaction Curve
+
+- **Assumptions**: Linear inverse demand curve $P(Q) = a - b(Q_1 + Q_2)$ and constant marginal costs $MC_1 = MC_2 = c$.
+
+- **Follower's Reaction Function**:
+  With these assumptions, the follower's reaction function simplifies to:
+  $$
+  Q_2 = \frac{a - c - bQ_1}{2b}
+  $$ {#eq-br-follow}
+  This function indicates how the follower's optimal output varies with the leader's output level.
+
+## Isoprofit Curves
+  
+- Isoprofit curves represent combinations of $Q_1$ and $Q_2$ that yield the same profit level for the follower. These curves help illustrate the follower's best response to different leader outputs.
+
+- In the case of linear demand and constant marginal costs, isoprofit curves are comprised of all points ($Q_1,Q_2$) that satisfy equations of the form
+  $$
+    \bar\pi_2=aQ_2-bQ_1Q_2-bQ_2^2
+  $$
+
+## Reaction and Isoprofit Curves
+
+![](figures/stackelberg-follower.png){fig-align="center"}
+
+## Reaction and Isoprofit Curves
+
+- Profits of firm 2 will increase as we move to isoprofit lines that are closer to the left, ($Q_1$ decreases)
+- Highest profits when firm 2 is a monopolist ($Q_1=0$)
+- Profit-maximization implies that for each choice of $Q_1$, firm 2 will pick the value of $Q_2$ that reaches the isoprofit curve furthest to the left
+- It follows that the slope of the isoprofit line must be vertical at the optimal choice (tangency condition)
+- The locus of these tangencies form $BR_2(Q_1)$
+
+## The Leader's Problem
+
+- **Leader's Objective**:
+  Given the follower's reaction function, the leader firm optimizes:
+  $$
+  \begin{aligned}
+  \max_{Q_1}\pi_1(Q_1) &= P(Q_1 + Q_2)Q_1 - C_1(Q_1) \\
+  &\text{s.t. } Q_2=BR_2(Q_1)
+  \end{aligned}
+  $$
+
+- The leader internalizes that its actions influence the output of the follower
+  - total output $Q=Q_1+BR_2(Q_1)$
+
+## The Leader's Problem
+
+- With linear demand and constant marginal costs
+  $$
+  \begin{aligned}
+  \max_{Q_1}\pi_1(Q_1) &= (a - b(Q_1 + Q_2))Q_1 - cQ_1 \\
+  &\text{s.t. } Q_2=\frac{a - c - bQ_1}{2b}
+  \end{aligned}
+  $$
+  
+## The Leader's Problem
+
+- Substituting the follower's reaction function into the leader's profit function and simplifying we get
+  $$
+    \max_{Q_1}\pi(Q_1)=\frac{a-c}{2}Q_1-\frac{b}{2}Q_1^2
+  $$
+
+## Optimal Quantities
+  
+- Solving the leader's maximization problem yields the Stackelberg equilibrium quantities for both firms:
+- For the leader $Q_1^*=\frac{a-c}{2b}$
+- and the follower, substituting into the $BR_2(Q_1),$  $Q_2^*=\frac{a-c}{4b}$
+- Total output $Q^*=\frac{3(a-c)}{4b}$
+- Market price $P^*(Q)=\frac{a+3c}{4}$
+
+## Stackelberg Equilibrium
+
+![](figures/stackelberg.png){fig-align="center"}
+
+## Stackelberg Equilibrium
+
+- The follower will choose an output along its reaction curve $BR_2(Q_1)$
+- The leader chooses an output combination that yields the highest profits
+- Thus, the leader chooses output such that the isoprofit curve is furthest down and tangent to the firm's 2 best reaction curve
+- In other words, firm 1 selects the point along $BR_2(Q_1)$ that reaches the highest isoprofit curve; 
+- The reaction curve is tangent to the isoprofit curve at this point
+
+## Discussion
+
+- The leader's advantage of moving first allows it to secure a more favorable portion of the market, influencing the overall market structure and outcomes
+- Unlike the Cournot outcome, which was symmetric, under the Stackelberg outcome, the leader produces more output than the follower (exactly twice as much in fact). 
+- Even though the market price is lower under the Stackelberg outcome than under the Cournot outcome, the leader's profit under the Stackelberg outcome is higher than its profit at the Cournot equilibrium. 
+- An oligopolist benefits by choosing its output first (sequential game)
+
+## 
+
+| Market Structure | $N$ | Optimal Firm Output $Q^*_i$ | Total Market Output $Q^*$ | Market Price $P^*$ |
+|-----------------|------|-----|----|--------------------|
+| Monopoly         | 1     | $\frac{a - c}{2b}$         | $\frac{a - c}{2b}$        | $\frac{a + c}{2}$ |
+| Cournot Duopoly  | 2     | $\frac{a - c}{3b}$         | $\frac{2(a - c)}{3b}$     | $\frac{(a + 2c)}{3}$ |
+| Stackelberg | 2 | Leader $\frac{a-c}{2b}$ ; Follower $\frac{a-c}{4b}$ | $\frac{3(a-c)}{4b}$ | $\frac{a+3c}{4}$ |
+| Perfect Competition | $\infty$ | 0 (virtually)        | $\frac{a - c}{b}$         | $c$                  |
+
+# Dominant Firm Market
+
+## Price Leadership Model
+
+- **Dominant Firm**: One firm has a large enough market share to set the price. This firm is the price leader.
+- **Follower Firm**: 
+  - In equilibrium, the follower must always set the same price as the leader (follows from homogeneous product assumption)
+  - Followers take the price set by the dominant firm and choose their profit-maximizing output (competitive behavior)
+- **Homogeneous Products**: The products offered by the dominant firm and the competitive fringe are identical, making price the primary competitive tool.
+- **Market Demand and Supply**: The dominant firm considers the residual demand curve, which is the market demand curve minus the supply of the competitive fringe.
+
+## The Follower's Problem
+
+- **Objective**: The follower firm aims to maximize its profits given the price set by the leader. The follower assumes this price as fixed and decides its quantity accordingly.
+  
+- **Profit Maximization**:
+  $$
+  PQ_2 - C_2(Q_2)
+  $$
+  where $P$ is the price set by the leader, and $C_2(Q_2)$ is the cost function for the follower.
+
+- **Output Decision**:
+  The follower determines its output level $Q_2$ where price equals marginal cost ($P = MC_2$), leading to a supply curve for the follower $S(P)$.
+
+## The Leader's Problem in Price Leadership
+
+- **Forecasting Follower's Response**:
+  The leader sets a price $P$ anticipating the follower's response. The leader must solve for the price that maximizes its profit, considering the residual demand it faces after the follower's supply.
+
+- **Residual Demand Curve**:
+  The leader's demand is the market demand minus the follower's supply, $R(P) = D(P) - S(P)$.
+
+- **Profit Maximization for the Leader**:
+  The leader's profit is $\pi_1(P) = (P - c)[D(P) - S(P)] = (P - c)R(P)$. The leader aims to choose $P$ where marginal revenue from the residual demand curve equals marginal cost.
+
+## Example
+
+- Demand is $D(P) = \frac{a}{b}- \frac{P}{b}$, 
+- the follower's cost function is quadratic, $C_2(Q_2)=Q^2_2/2$ and 
+- the leader's cost function is $C_1(Q_1)=cQ_1$
+- Solving the follower's problem we can derive the follower's supply curve
+  $$
+    P=Q_2 \implies S(p)=P
+  $$
+
+## Example
+
+- Residual demand for the leader 
+  $$
+  R($P)=D(P)-S(P)=\frac{a}{b}- \frac{P}{b}-P=\frac{a}{b}- \frac{b+1}{b}P
+  $$
+- Solving for P, $P=\frac{a}{b+1}-\frac{b}{b+1}Q_1$
+- **Leader's Optimal Price and Output**:
+  By setting marginal revenue equal to marginal cost for the residual demand curve, 
+  $Q_1^*=\frac{a-c(b+1)}{2b}$;
+  $P^*=\frac{a-c(b+1)}{2(b+1)}$
+
+## Comparison with Other Market Models
+
+- **Distinctive Features of Price Leadership**:
+  - The dominant firm has the ability to influence market prices directly, unlike in Cournot or Bertrand models where firms' strategies are interdependent without a clear leader.
+  - Unlike the Stackelberg model, where leadership is defined by the sequence of moves, price leadership establishes dominance through market share and the ability to set prices.
+
+- **Market Efficiency and Welfare**:
+  - The price leadership model can result in higher prices and lower outputs compared to perfectly competitive markets but may be more efficient than monopolistic outcomes due to the presence of the competitive fringe.

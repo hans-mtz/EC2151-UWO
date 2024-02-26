@@ -8,6 +8,10 @@ To include the latex TikZ figures in your slides, do the following:
 pdflatex file.tex
 ```
 
+```bash 
+lualatex file.tex
+```
+
 1. Once the pdf is greated, use `imagemagick` to convert it to JPEG. In the terminal, run 
 
 ```bash
