@@ -451,7 +451,7 @@ $$
 
 - In the case of linear demand and constant marginal costs, isoprofit curves are comprised of all points ($Q_1,Q_2$) that satisfy equations of the form
   $$
-    \bar\pi_2=aQ_2-bQ_1Q_2-bQ_2^2
+    \bar\pi_2=(a-c)Q_2-bQ_1Q_2-bQ_2^2
   $$
 
 ## Reaction and Isoprofit Curves
@@ -537,12 +537,12 @@ $$
 
 ## Price Leadership Model
 
-- **Dominant Firm**: One firm has a large enough market share to set the price. This firm is the price leader.
+- **Dominant Firm**: 
+  - One firm has a large enough market share to set the price. This firm is the price leader.
+  - The dominant firm considers the residual demand curve, which is the market demand curve minus the supply of the competitive fringe.
 - **Follower Firm**: 
   - In equilibrium, the follower must always set the same price as the leader (follows from homogeneous product assumption)
   - Followers take the price set by the dominant firm and choose their profit-maximizing output (competitive behavior)
-- **Homogeneous Products**: The products offered by the dominant firm and the competitive fringe are identical, making price the primary competitive tool.
-- **Market Demand and Supply**: The dominant firm considers the residual demand curve, which is the market demand curve minus the supply of the competitive fringe.
 
 ## The Follower's Problem
 
@@ -557,7 +557,7 @@ $$
 - **Output Decision**:
   The follower determines its output level $Q_2$ where price equals marginal cost ($P = MC_2$), leading to a supply curve for the follower $S(P)$.
 
-## The Leader's Problem in Price Leadership
+## The Leader's Problem
 
 - **Forecasting Follower's Response**:
   The leader sets a price $P$ anticipating the follower's response. The leader must solve for the price that maximizes its profit, considering the residual demand it faces after the follower's supply.
@@ -582,19 +582,178 @@ $$
 
 - Residual demand for the leader 
   $$
-  R($P)=D(P)-S(P)=\frac{a}{b}- \frac{P}{b}-P=\frac{a}{b}- \frac{b+1}{b}P
+  R(P)=D(P)-S(P)=\frac{a}{b}- \frac{P}{b}-P=\frac{a}{b}- \frac{b+1}{b}P
   $$
 - Solving for P, $P=\frac{a}{b+1}-\frac{b}{b+1}Q_1$
 - **Leader's Optimal Price and Output**:
   By setting marginal revenue equal to marginal cost for the residual demand curve, 
   $Q_1^*=\frac{a-c(b+1)}{2b}$;
-  $P^*=\frac{a-c(b+1)}{2(b+1)}$
+  $P^*=\frac{a-c(b+1)}{2(b+1)}$ using the residual demand curve (!!)
 
-## Comparison with Other Market Models
+## Equilibrium
 
-- **Distinctive Features of Price Leadership**:
-  - The dominant firm has the ability to influence market prices directly, unlike in Cournot or Bertrand models where firms' strategies are interdependent without a clear leader.
-  - Unlike the Stackelberg model, where leadership is defined by the sequence of moves, price leadership establishes dominance through market share and the ability to set prices.
+![](book-figures/c13/c13f007.png){fig-align="center"}
 
-- **Market Efficiency and Welfare**:
-  - The price leadership model can result in higher prices and lower outputs compared to perfectly competitive markets but may be more efficient than monopolistic outcomes due to the presence of the competitive fringe.
+## Competitive Fringe Growth
+
+:::: {.columns}
+::: {.column width="40%"}
+
+::: {.small}
+
+- When the size of the competitive fringe grows its supply curve pivots rightward $S_F$ to $S'_F$
+(the fringe supplies more at a given price). 
+- This causes the dominant firm's residual demand curve to pivot leftward $D_R$ to $D'_R$
+ (the dominant firm supplies less at a given price). 
+- Dominant firm's profit-maximizing price, market share and profit decrease. Its optimal quantity remains the same, but the fringe's supply increases.
+
+:::
+
+:::
+::: {.column width="60%"}
+
+![](book-figures/c13/c13f008.png){fig-align="center"}
+
+:::
+::::
+
+# Differentiated Goods
+
+## Differentiated Goods
+
+- Differentiated products: products that consumers consider distinctive from each other.
+
+- **Vertical differentiation** is about inferiority or superiority. 
+  - Two products are vertically differentiated when consumers consider one product better or worse than the other. 
+  - Duracell batteries are vertically differentiated from generic store-brand batteries because they last longer.
+
+## Horizontal Differentiated Goods
+
+- **Horizontal differentiation** is about substitutability. 
+  - Two products, A and B, are horizontally differentiated when, at equal prices, some consumers view B as a poor substitute for A and thus will buy A even if A's price is higher than B's, while other consumers view A as a poor substitute for B and thus will buy B even if B's price is higher than A's. 
+  - Diet Coke and Diet Pepsi are horizontally differentiated.
+- Horizontal differentiation is an important concept for the theory of oligopoly and monopolistic competition
+
+## Horizontal Differentiation
+
+- Firms selling horizontally differentiated products have downward-sloping demand curves.
+
+- Weak horizontal differentiation: the firm's demand is quite sensitive to a change in its own price and the prices of its rivals. 
+
+- Strong horizontal differentiation: the firm's demand is much less sensitive to a change in its own price and the prices of its rivals.
+
+## Horizontal Differentiation
+
+![Price decrease of competitor -> Shifts $D$ to $D'$](book-figures/c13/c13f009.png){fig-align="center"}
+
+
+## Bertrand with Differentiated Products
+
+- Firms have horizontally differentiated products and compete in prices
+- Demand for firm 1 $Q_1(P_1,P_2)$ (and firm 2) are now continuous (we can take derivatives now!)
+  $$
+  \begin{aligned}
+    \frac{\partial Q_1(P_1,P_2)}{\partial P_1} &<0 \\
+    \frac{\partial Q_1(P_1,P_2)}{\partial P_2} &>0
+  \end{aligned}
+  $$
+
+## Profit-Max Firms' Problem
+
+- For firm 1, 
+  $$
+    \max_{P_1} \pi(P_1)= P_1Q_1(P_1,P_2)-C_1(Q_1(P_1,P_2))
+  $$
+
+- where $P_i$ is the price of firm $i=1,2$, $Q_1(P_1,P_2)$ is the demand of firm 1, and $C_1$ is the cost function of firm 1
+
+## Price Reaction Function
+
+- As in the Cournot model, an equilibrium occurs when each firm is doing the best it can given the actions of its rival. 
+- We begin by deriving each firm's **price reaction function**—its profit-maximizing price as a function of its rival's price.
+- Deriving with respect to $P_1$ and solving for $P_1$,
+  $$
+    P_1=R_1(P_2)
+  $$
+- We can do the same for firm 2, $P_2=R_2(P_1)$
+
+## Price Reaction Curves
+
+![Example of reaction functions. The Bertrand equilibrium occurs where the two reaction functions intersect, E. This differs from the monopoly equilibrium, M.](book-figures/c13/c13f011.png){fig-align="center"}
+
+## Equilibrium
+
+- Product differentiation softens price competition. 
+  - When products are as strongly differentiated, price cutting is less effective for stealing a rival's business than when products are perfect substitutes. 
+  - However, firms incur a heavy cost to achieve this product differentiation.
+- The Bertrand equilibrium prices do not correspond to the monopoly prices
+  - As in the Cournot model, independent profit-maximizing oligopolists will typically not attain the outcome that a profit-maximizing monopolist would, because neither firm takes into account the adverse effect that a price cut or the beneficial effect that a price increase would have on its rival.
+
+## Monopolistic Competition
+
+- Three distinguishing features.
+1. **Fragmented market**—it consists of many buyers and sellers. 
+1. **Free entry** (and exit)—any firm can hire the inputs (labor, capital, and so forth) needed to compete in the market, and they can release these inputs from employment when they do not need them.
+1. Firms produce **horizontally differentiated** products—consumers view firms' products as imperfect substitutes for each other.
+- Market fragmentation and free entry and exit are also characteristics of perfectly competitive markets.
+
+## Equilibrium
+
+- In choosing their prices, monopolistic competitors behave like the differentiated products oligopolists
+- Even though the market is fragmented, each firm's demand curve is downward sloping because of product differentiation. 
+- Taking the prices of other firms as given, each firm maximizes its profit at the point at which its marginal revenue equals marginal cost
+- As in the Bertrand model of oligopoly with differentiated products, the market attains an **equilibrium** when every firm is charging a price that is the best response to the set of prices charged by *all other* firms in the market.
+
+## Short-Run Equilibrium
+
+- The key difference between monopolistic competition and differentiated products oligopoly is **free entry**. 
+  - If there are profit opportunities in the market, new entrants will appear to seize them
+- Hence, in the short run profits might be positive
+
+## Short-Run Equilibrium
+
+![](book-figures/c13/c13f013.png){fig-align="center"}
+
+## Long-Run Equilibrium
+
+- If profits are positive in the short-run, more firms will enter the market to take advantage of the profit opportunity.
+- As more firms come into the market, each firm's share of overall market demand will fall—the typical firm's demand curve will shift leftward. 
+- Entry and the resultant leftward shift in firms' demand curves will cease when firms make zero economic profit.
+
+## Long-Run Equilibrium
+
+![](book-figures/c13/c13f014.png){fig-align="center"}
+
+## Possible Long-Run Equilibrium Prices and Quantities
+
+- Even though in monopolistic competition long-run equilibrium profits are zero, the equilibrium price and quantities might be lower or higher
+- Long-run equilibrium prices and quantities will depend on the price elasticity of the demand curve, and or the average cost curve
+
+## Possible Long-Run Equilibrium Prices and Quantities
+
+
+## Long-Run Equilibrium - Price Elasticity of Demand
+
+- In a long-run equilibrium with highly elastic demand, 
+  - the margin (P* − MC) between price and marginal cost is small, and 
+  - firms produce a large volume of output. 
+- In a long-run equilibrium with inelastic demand, 
+  - the margin between price and marginal cost is large and 
+  - each firm produces a small volume of output. 
+- If the total number of units purchased in equilibrium is about the same in Markets A and B, Market B would have more firms than Market A because each firm in market B sells a smaller quantity than each firm in market A.
+
+## Long-Run Equilibrium - Price Elasticity of Demand
+
+
+![](book-figures/c13/c13f015.png){fig-align="center"}
+
+## Long-Run Equilibrium - Shift in AC
+
+- Starting from a long-run equilibrium, suppose all firms experience a decrease in their average cost (represented by a shift from AC to AC′ in the figure). 
+- At the current price equilibrium, firms now enjoy positive economic profit, which encourages the entry of additional firms. 
+- When long-run equilibrium is restored, a typical firm again earns zero profits, but this occurs at the higher long-run equilibrium price. 
+- The entry of more firms has driven the equilibrium price up!
+
+## Long-Run Equilibrium - Shift in AC
+
+![](book-figures/c13/c13f016.png){fig-align="center"}
