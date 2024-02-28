@@ -687,7 +687,7 @@ $$
   - When products are as strongly differentiated, price cutting is less effective for stealing a rival's business than when products are perfect substitutes. 
   - However, firms incur a heavy cost to achieve this product differentiation.
 - The Bertrand equilibrium prices do not correspond to the monopoly prices
-  - As in the Cournot model, independent profit-maximizing oligopolists will typically not attain the outcome that a profit-maximizing monopolist would, because neither firm takes into account the adverse effect that a price cut or the beneficial effect that a price increase would have on its rival.
+  - As in the Cournot model, independent profit-maximizing oligopolists will typically not attain the monopolist outcome, because neither firm takes into account the adverse/beneficial effect that a price cut/increase would have on its rival.
 
 ## Monopolistic Competition
 
@@ -729,8 +729,10 @@ $$
 - Even though in monopolistic competition long-run equilibrium profits are zero, the equilibrium price and quantities might be lower or higher
 - Long-run equilibrium prices and quantities will depend on the price elasticity of the demand curve, and or the average cost curve
 
-## Possible Long-Run Equilibrium Prices and Quantities
+## Long-Run Equilibrium - Price Elasticity of Demand
 
+
+![](book-figures/c13/c13f015.png){fig-align="center"}
 
 ## Long-Run Equilibrium - Price Elasticity of Demand
 
@@ -740,12 +742,11 @@ $$
 - In a long-run equilibrium with inelastic demand, 
   - the margin between price and marginal cost is large and 
   - each firm produces a small volume of output. 
-- If the total number of units purchased in equilibrium is about the same in Markets A and B, Market B would have more firms than Market A because each firm in market B sells a smaller quantity than each firm in market A.
+- If the total number of units purchased in equilibrium is the same in both, Marketa A and B, Market B would have more firms because each firm sells a smaller quantity than each firm in Market A.
 
-## Long-Run Equilibrium - Price Elasticity of Demand
+## Long-Run Equilibrium - Shift in AC
 
-
-![](book-figures/c13/c13f015.png){fig-align="center"}
+![](book-figures/c13/c13f016.png){fig-align="center"}
 
 ## Long-Run Equilibrium - Shift in AC
 
@@ -754,6 +755,4 @@ $$
 - When long-run equilibrium is restored, a typical firm again earns zero profits, but this occurs at the higher long-run equilibrium price. 
 - The entry of more firms has driven the equilibrium price up!
 
-## Long-Run Equilibrium - Shift in AC
 
-![](book-figures/c13/c13f016.png){fig-align="center"}
